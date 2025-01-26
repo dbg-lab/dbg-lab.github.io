@@ -1,0 +1,15 @@
+<div class="profile-container">
+    <img src="{{ .Get "image" }}" alt="{{ .Get "name" }}" class="profile-photo">
+    <div class="profile-info">
+        <h2 class="profile-name">{{ .Get "name" }}</h2>
+        <ul class="profile-details">
+            {{ range split (.Get "titles") ";" }}
+                <li><em>{{ . }}</em></li>
+            {{ end }}
+        </ul>
+        {{ partial "social-links.html" . }}
+    </div>
+</div>
+<div class="profile-bio">
+    {{ .Inner | markdownify }}
+</div> 

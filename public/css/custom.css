@@ -1,0 +1,70 @@
+:root {
+    /* Main colors */
+    --cover-text-color: #0C5797 !important;
+    --highlight: #4FB0E5 !important;
+    --highlight-contrast: #F4F4F5 !important;
+    
+    /* Section colors */
+    --section-light-bg-color: #F4F4F5 !important;
+    --section-light-text-color: #0C5797 !important;
+    --section-dark-bg-color: #0C5797 !important;
+    --section-dark-text-color: #F4F4F5 !important;
+    
+    /* Navigation and interactive elements */
+    --sticky-menu-text-color: #4FB0E5 !important;
+    --highlight-inverse: #C90E5B !important;
+    --highlight-inverse-contrast: #F4F4F5 !important;
+
+    /* Footer */
+    --footer-color-background: #0C5797 !important;
+    --footer-color: #F4F4F5 !important;
+}
+
+#site-head.withCenteredImage {
+    background-image: url('/images/cover-image.png') !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+#blog-logo {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 2rem;
+    z-index: 2;
+    background-color: #f6f6f3;
+    text-align: center;
+}
+
+#blog-logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    background-color: #f6f6f3;
+    z-index: -1;
+}
+
+#blog-logo img {
+    max-height: 200px;
+    width: auto;
+    object-fit: contain;
+    display: inline-block;
+    margin: 0 auto;
+    border: 5px solid red;
+}
+
+@media (max-width: 768px) {
+    #blog-logo img {
+        max-height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    #blog-logo img {
+        max-height: 100px;
+    }
+} 

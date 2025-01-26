@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta name="generator" content="Hugo 0.140.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+
+<title>The Goodman Lab</title>
+
+
+
+
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png" />
+
+
+  <meta name="description" content="Website for the Goodman Lab for Synthetic Immunology at the University of Pennsylvania"
+/>
+
+  <meta name="keywords" content="synthetic immunology, T cells, CAR-T therapy, cancer immunotherapy, synthetic biology, genome engineering, CRISPR, AAV gene delivery, University of Pennsylvania, Penn Medicine, cancer biology, cell therapy, immunotherapy, gene therapy, cellular engineering, cancer research, immune system engineering, adoptive cell therapy, therapeutic T cells, precision medicine"
+/>
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/style.min.723f9f784e5706b31546134f2b00f50122aaff59fb1cc55efc9ca4f10bbf9493.css" type="text/css" integrity="sha256-cj&#43;feE5XBrMVRhNPKwD1ASKq/1n7HMVe/Jyk8Qu/lJM=" />
+
+<meta property="og:url" content="http://localhost:1313/">
+  <meta property="og:site_name" content="The Goodman Lab">
+  <meta property="og:title" content="The Goodman Lab">
+  <meta property="og:description" content="Website for the Goodman Lab for Synthetic Immunology at the University of Pennsylvania">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="http://localhost:1313/images/cover-image.png">
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/cover-image.png">
+  <meta name="twitter:title" content="The Goodman Lab">
+  <meta name="twitter:description" content="Website for the Goodman Lab for Synthetic Immunology at the University of Pennsylvania">
+
+
+  <meta itemprop="name" content="The Goodman Lab">
+  <meta itemprop="description" content="Website for the Goodman Lab for Synthetic Immunology at the University of Pennsylvania">
+  <meta itemprop="image" content="http://localhost:1313/images/cover-image.png">
+
+
+
+
+
+
+<style>
+ 
+body #site-head #blog-logo * img,
+body #site-head #blog-logo img,
+#blog-logo img,
+img[src*="web_hero_logo"] {
+    max-height: 300px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    display: inline-block !important;
+    margin: 0 auto !important;
+    box-shadow: 0 0 30px 10px #f6f6f3 !important;
+}
+
+body #site-head #blog-logo {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    padding: 0rem !important;
+    z-index: 2 !important;
+    background-color: #f6f6f3 !important;
+
+    text-align: center !important;
+    box-sizing: border-box !important;
+}
+
+body #site-head #blog-logo::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100vw !important;
+    height: 100% !important;
+    background-color: #f6f6f3 !important;
+    z-index: -1 !important;
+}
+
+@media (max-width: 1200px) {
+    body #site-head #blog-logo * img,
+    body #site-head #blog-logo img,
+    #blog-logo img,
+    img[src*="web_hero_logo"] {
+        max-height: 250px !important;
+        box-shadow: 0 0 25px 8px #f6f6f3 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    body #site-head #blog-logo * img,
+    body #site-head #blog-logo img,
+    #blog-logo img,
+    img[src*="web_hero_logo"] {
+        max-height: 200px !important;
+        box-shadow: 0 0 20px 6px #f6f6f3 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    body #site-head #blog-logo * img,
+    body #site-head #blog-logo img,
+    #blog-logo img,
+    img[src*="web_hero_logo"] {
+        max-height: 150px !important;
+        box-shadow: 0 0 15px 4px #f6f6f3 !important;
+    }
+}
+
+ 
+#site-head {
+    position: relative !important;
+    height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+#site-head.withCenteredImage {
+    background-image: url('/images/cover-image.png') !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+ 
+#header-arrow {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 10 !important;   
+    text-shadow: 0 0 10px rgba(0,0,0,0.3) !important;   
+}
+
+ 
+#site-head .site-menu {
+    margin-bottom: 3vh !important;   
+}
+
+ 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
+
+ 
+body .post-content h1,
+.post h1,
+h1,
+body #site-head h1 {
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 5rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+    padding-bottom: 0.5rem !important;
+    margin-bottom: 2rem !important;
+}
+
+body .post-content h2,
+.post h2,
+h2,
+body #site-head h2 {
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 4rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.03em !important;
+    margin-top: 0 !important;
+    font-style: normal !important;
+}
+
+body .post-content h3,
+.post h3,
+h3,
+body #site-head h3 {
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 2.5rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em !important;
+    margin-top: 2rem !important;
+}
+
+ 
+.post.first h1, .post.first h2, .post.first h3,
+.post.even h1, .post.even h2, .post.even h3 {
+    color: var(--section-light-text-color) !important;
+}
+
+.post.odd h1, .post.odd h2, .post.odd h3 {
+    color: var(--section-dark-text-color) !important;
+}
+
+ 
+.post-content ul {
+    margin-left: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.post-content ul li {
+    margin-bottom: 0.5rem !important;
+}
+
+ 
+.post-content img[alt="profile-photo"] {
+    width: 250px !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    float: left !important;
+    margin: 0 4rem 3rem 0 !important;
+}
+
+ 
+.post-content img[alt="profile-photo"] + h3,
+.post-content img[alt="profile-photo"] + h3 + p {
+    line-height: 1.8 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+ 
+.post-content h1,
+.post-content h2.section-header {
+    clear: both !important;
+}
+
+ 
+.profile-end {
+    clear: both !important;
+    margin-bottom: 4rem !important;
+}
+
+
+.post-content img[alt="profile-photo"] {
+    width: 250px !important;
+    height: auto !important;
+    border-radius: 32px !important;
+    float: left !important;
+    margin: 0 4rem 3rem 0 !important;
+}
+
+ 
+.clear-float {
+    clear: both !important;
+    height: 0 !important;   
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+ 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&family=Roboto+Condensed:wght@400;700&display=swap');
+
+ 
+body {
+    font-family: 'Inter', sans-serif !important;
+}
+
+ 
+.post-content h1 {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 800 !important;   
+}
+
+ 
+.post-content h2 {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 200 !important;   
+}
+
+ 
+.post-content h3 {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600 !important;   
+}
+
+ 
+.post-content p {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;   
+}
+
+ 
+.post-content img[alt="profile-photo"] {
+    width: 250px !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    float: left !important;
+    margin: 0 4rem 3rem 0 !important;
+}
+
+ 
+.clear-float {
+    clear: both !important;
+}
+
+ 
+.affiliations-container {
+    background-color: rgba(246, 246, 243, 0.75) !important;
+    border-radius: 12px !important;
+    padding: 1rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 70% !important;
+    max-width: 1000px !important;
+    margin: 0 auto 2vh auto !important;
+    box-shadow: 0 0 30px 10px rgba(246, 246, 243, 0.75) !important;
+}
+
+.affiliation-logo {
+    height: auto !important;
+    width: 28% !important;
+    max-height: 40px !important;
+    object-fit: contain !important;
+}
+
+ 
+@media (max-width: 1200px) {
+    .affiliations-container {
+        width: 80% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .affiliations-container {
+        width: 90% !important;
+        padding: 0.2rem !important;
+    }
+    .affiliation-logo {
+        max-height: 35px !important;
+    }
+}
+
+ 
+.transition-section {
+    position: absolute !important;
+    bottom: 0 !important;
+    height: 15vh !important;
+    background: linear-gradient(180deg, 
+        transparent 0%,
+        rgba(246, 246, 243, 0.1) 40%,
+        rgba(246, 246, 243, 0.2) 100%
+    ) !important;
+    z-index: 10 !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: flex-end !important;
+}
+
+ 
+.post-content {
+    margin-top: 0 !important;   
+}
+
+.post-content h1 {
+    margin-bottom: 0 !important;   
+    padding-top: 2rem !important;   
+}
+
+ 
+.post-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+ 
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+ 
+.grid-container {
+    display: grid;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-md) 0;
+}
+
+ 
+.grid-item {
+    display: block;
+    min-width: 0;
+}
+
+ 
+.item-icon {
+    display: block;
+    width: 80%;
+    aspect-ratio: 1;
+    margin: 0 auto var(--spacing-md);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+ 
+.item-content {
+    text-align: left;
+    font-size: 1.6rem;   
+    line-height: 1.9rem;     
+}
+
+ 
+.grid-item strong {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-size: 2rem;    
+    line-height: 2.3rem;/     
+}
+
+ 
+.receptor-icon { background-image: url('/images/icons/icons_receptor_design.svg'); }
+.genome-icon { background-image: url('/images/icons/icons_genome_editing.svg'); }
+.delivery-icon { background-image: url('/images/icons/icons_viral_gene_delivery.svg'); }
+.systems-icon { background-image: url('/images/icons/icons_systems_biology.svg'); }
+.ml-icon { background-image: url('/images/icons/icons_machine_learning.svg'); }
+.protein-icon { background-image: url('/images/icons/icons_protein_design.svg'); }
+.dna-icon { background-image: url('/images/icons/icons_dna_barcoding.svg'); }
+.synthetic-icon { background-image: url('/images/icons/icons_synthetic_biology.svg'); }
+
+ 
+:root {
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+}
+
+ 
+.profile-container {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-md) 0;
+    align-items: flex-start;
+}
+
+.profile-photo {
+    width: 250px;
+    border-radius: 36px;
+    flex-shrink: 0;
+}
+
+.profile-info {
+    flex-grow: 1;
+    padding-top: var(--spacing-sm);
+}
+
+ 
+.profile-name {
+    margin-bottom: var(--spacing-sm) !important;
+    font-size: 1.9rem !important;
+    line-height: 2.5rem !important;
+    white-space: nowrap !important;   
+    display: block !important;
+    margin-top: 0 !important;
+}
+
+ 
+.profile-name .title {
+    display: block !important;   
+    margin-top: 0.5rem !important;
+}
+
+.profile-details li {
+    margin-bottom: var(--spacing-xs) !important;
+    font-style: italic !important;
+    font-size: 1.9rem !important;
+    line-height: 2.2rem !important;
+    display: block !important;
+    padding: 0.2rem 0 !important;
+}
+
+.profile-bio {
+    margin-top: var(--spacing-lg) !important;
+    font-size: 1.9rem !important;
+    line-height: 2.5rem !important;
+    max-width: 800px !important;
+    font-weight: 200 !important;
+    clear: both !important;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;   
+}
+
+.contact-item i {
+    flex-shrink: 0;
+    margin-top: 0.3rem;
+}
+
+.contact-text {
+    flex-grow: 1;
+}
+
+.contact-text a {
+    text-decoration: none;
+}
+
+.full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-bottom: 0;
+}
+
+.building-photo img {
+    display: block;
+}
+
+.map-embed iframe {
+    display: block;
+}
+
+ 
+.post-content h1 {
+    margin-bottom: 4rem !important;   
+}
+
+.contact-list-container {
+    margin-bottom: 6rem !important;   
+}
+
+.social-links {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;   
+    align-items: center;
+    width: 100%;   
+    max-width: 800px;   
+    padding: 0 30px;   
+}
+
+.social-links a {
+    color: inherit;
+    text-decoration: none;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+}
+
+.icon-separator {
+    display: none;
+}
+
+ 
+@media (max-width: 768px) {
+    .social-links {
+        padding: 0 15px;   
+    }
+}
+
+ 
+.custom-cv-icon {
+    width: 1em;   
+    height: 1em;
+    mask: url('/images/icons/icons_file-cv.svg') no-repeat center;
+    -webkit-mask: url('/images/icons/icons_file-cv.svg') no-repeat center;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    background-color: currentColor;   
+    display: inline-block;
+}
+
+ 
+.social-links a:hover .custom-cv-icon {
+    opacity: 0.8;
+}
+</style>
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+
+</head>
+  <body>
+
+
+
+
+
+
+
+
+  
+  <style>
+   #site-head.withCenteredImage {
+    background-image: url('/images/cover-image_hu15591379101598173737.webp');
+  } 
+  
+    @media (max-width:1920px) and (max-height:1280px) {
+      #site-head.withCenteredImage { background-image: url('/images/cover-image_hu11074962080176158592.webp'); }
+    }
+    @media (max-width:1600px) and (max-height:1067px) {
+      #site-head.withCenteredImage { background-image: url('/images/cover-image_hu15687499526500245596.webp'); }
+    }
+    @media (max-width:1366px) and (max-height:911px) {
+      #site-head.withCenteredImage { background-image: url('/images/cover-image_hu3139292586333341278.webp'); }
+    }
+
+    
+  
+    @media (max-height:1024px) and (max-aspect-ratio: 900 / 1024) {
+      #site-head.withCenteredImage { background-image: url('/images/cover-image_hu2182349618053394909.webp'); }
+    }
+    @media (max-height:1024px) and (max-aspect-ratio: 600 / 1024) {
+      #site-head.withCenteredImage { background-image: url('/images/cover-image_hu12073887690213816498.webp'); }
+    }
+    @media (max-height:1024px) and (max-aspect-ratio: 360 / 1024) {
+      #site-head.withCenteredImage { background-image: url('/images/cover-image_hu3760967156516155041.webp'); }
+    }
+  </style>
+  
+<header id="site-head" class="withCenteredImage">
+
+
+    <div class="vertical">
+
+        
+
+	
+	
+
+        <div id="site-head-content" class="inner">
+	    <img id="blog-logo" alt="" src="/images/web_hero_logo.png" />
+
+            
+              
+              
+            
+
+            
+              
+              
+
+              
+                
+                 <a class='btn site-menu' data-title-anchor='welcome' href='#welcome'>Welcome</a>
+              
+            
+              
+              
+
+              
+                
+                 <a class='btn site-menu' data-title-anchor='people' href='#people'>People</a>
+              
+            
+              
+              
+
+              
+                
+                 <a class='btn site-menu' data-title-anchor='join-us' href='#join-us'>Join Us</a>
+              
+            
+              
+              
+
+              
+                
+                 <a class='btn site-menu' data-title-anchor='contact' href='#contact'>Contact</a>
+              
+            
+
+            
+                
+                <a id='header-arrow' href="#welcome" aria-label="Go to first section"><i class="fa fa-angle-down"></i></a>
+            
+        </div>
+    </div>
+</header>
+
+<section class="transition-section">
+    <div class="affiliations-container">
+        <img src="/images/penn-logo.svg" alt="University of Pennsylvania" class="affiliation-logo">
+        <img src="/images/cci-logo.png" alt="Center for Cellular Immunotherapies" class="affiliation-logo">
+        <img src="/images/pici-logo.svg" alt="Parker Institute for Cancer Immunotherapy" class="affiliation-logo">
+    </div>
+</section> 
+
+<main class="content" role="main">
+    
+    <div class='fixed-nav'>
+        
+        
+        
+            
+            <a class='fn-item' item_index='1' href='#welcome'>Welcome</a>
+            
+        
+            
+            <a class='fn-item' item_index='2' href='#people'>People</a>
+            
+        
+            
+            <a class='fn-item' item_index='3' href='#join-us'>Join Us</a>
+            
+        
+            
+            <a class='fn-item' item_index='4' href='#contact'>Contact</a>
+            
+        
+        
+            
+            <a class='fn-item' item_index='5' href='./#site-head'>Return To Top</a>
+        
+    </div>
+
+    
+    
+        
+        
+        <div class='post-holder'>
+            <article id='welcome' class='post first '>
+                <header class="post-header">
+                    <h2 class="post-title">Welcome</h2>
+                </header>
+                <section class="post-content">
+                    <p>We are a <strong>brand-new lab</strong> at the <a href="https://www.upenn.edu">University of Pennsylvania</a>, starting in <strong>July 2025</strong>, affiliated with the <a href="https://www.upenn.edu/cancer-biology">Department of Cancer Biology</a> and the <a href="https://www.med.upenn.edu/cci/">Center for Cellular Immunotherapies</a>.</p>
+<p>Our focus is to <strong>understand and engineer the genetic machinery of immune cells</strong>, with the ultimate goal of improving cellular immunotherapies for cancer and other diseases.</p>
+<h3 id="scientific-approaches">Scientific Approaches</h3>
+<p>We are excited to explore and engineer immune cell biology through:</p>
+<div class="grid-container" style="grid-template-columns: repeat(3, 1fr);">
+    
+<div class="grid-item">
+    
+        <div class="item-icon receptor-icon"></div>
+    
+    <div class="item-content">
+        <strong>Protein Engineering</strong>
+Designing new receptors, transcription factors, and other proteins to rewire cellular behavior
+    </div>
+</div> 
+
+<div class="grid-item">
+    
+        <div class="item-icon systems-icon"></div>
+    
+    <div class="item-content">
+        <strong>Functional Genomics</strong>
+Understanding cellular signaling networks and their regulation
+    </div>
+</div> 
+
+<div class="grid-item">
+    
+        <div class="item-icon genome-icon"></div>
+    
+    <div class="item-content">
+        <strong>Synthetic Biology</strong>
+Designing and testing new genetic circuits and regulatory elements
+    </div>
+</div> 
+
+</div> 
+<h3 id="technology-development">Technology Development</h3>
+<p>A large part of our work is the development of new technologies for immune cell engineering. We are especially focused on the development of <strong>high throughput methods</strong> that allow us to <strong>design and measure many different genetic modifications in parallel</strong>.</p>
+<div class="grid-container" style="grid-template-columns: repeat(3, 1fr);">
+    
+
+<div class="grid-item">
+    
+        <div class="item-icon ml-icon"></div>
+    
+    <div class="item-content">
+        <strong>Machine Learning</strong>
+Developing computational models that predict the function of proteins and genetic circuits
+    </div>
+</div> 
+
+<div class="grid-item">
+    
+        <div class="item-icon dna-icon"></div>
+    
+    <div class="item-content">
+        <strong>Barcoded Clonal Tracking</strong>
+High-throughput mapping of clonal heterogeneity and responses to designed genetic modifications
+    </div>
+</div> 
+
+<div class="grid-item">
+    
+        <div class="item-icon delivery-icon"></div>
+    
+    <div class="item-content">
+        <strong>Genome Editing</strong>
+New systems for efficient, specific and accurate delivery of large genetic payloads to immune cells
+    </div>
+</div> 
+
+</div> 
+
+                </section>
+            </article>
+            <div class='post-after light'></div>
+        </div>
+        
+    
+        
+        
+        <div class='post-holder dark'>
+            <article id='people' class='post  '>
+                <header class="post-header">
+                    <h2 class="post-title">People</h2>
+                </header>
+                <section class="post-content">
+                    <h3 id="principal-investigator">Principal Investigator</h3>
+<div class="profile-container">
+    <img src="/images/daniel-goodman.png" alt="Daniel B. Goodman, Ph.D." class="profile-photo">
+    <div class="profile-info">
+        <h2 class="profile-name">Daniel B. Goodman, Ph.D.</h2>
+        <ul class="profile-details">
+            
+                <li><em>Assistant Professor, Department of Cancer Biology</em></li>
+            
+                <li><em>Investigator, Center for Cellular Immunotherapies</em></li>
+            
+                <li><em>Investigator, Parker Institute for Cancer Immunotherapy</em></li>
+            
+        </ul>
+        <div class="social-links">
+    
+        <a href="/files/dbg_cv.pdf" title="Download my CV" target="_blank" rel="noopener">
+            <i class="custom-cv-icon"></i>
+        </a>
+    
+        <a href="http://dbgoodman.com" title="Personal Website" target="_blank" rel="noopener">
+            <i class="fa-solid fa-globe"></i>
+        </a>
+    
+        <a href="https://scholar.google.com/citations?user=j_1Z_l4AAAAJ" title="Find my work on Google Scholar" target="_blank" rel="noopener">
+            <i class="fa-solid fa-graduation-cap"></i>
+        </a>
+    
+        <a href="https://twitter.com/dbgoodman" title="Follow me on Twitter" target="_blank" rel="noopener">
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+    
+        <a href="https://github.com/dbgoodman" title="Fork me on GitHub" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    
+        <a href="http://orcid.org/0000-0003-3759-6883" title="Find my work on ORCID" target="_blank" rel="noopener">
+            <i class="fa-brands fa-orcid"></i>
+        </a>
+    
+        <a href="https://www.linkedin.com/in/dbgoodman/" title="Add me on LinkedIn" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+    
+</div> 
+    </div>
+</div>
+<div class="profile-bio">
+    Dr. Goodman is an Assistant Professor in the Department of Cancer Biology and an Investigator at the Center for Cellular Immunotherapies and the Parker Institute for Cancer Immunotherapy at the University of Pennsylvania. He earned his Ph.D. in Medical Engineering and Physics from the HST Program at MIT, where he worked with George Church on high-throughput design and meaasurement of microbial genomes and genetic element. He then joined UCSF as a Jane Coffin Childs Postdoctoral Fellow, where he trained in the laboratories of Kole Roybal and Alexander Marson, applying these high-throughput synthetic approaches to T cell engineering and CAR-T receptor design.
+</div> 
+
+                </section>
+            </article>
+            <div class='post-after'></div>
+        </div>
+        
+    
+        
+        
+        <div class='post-holder'>
+            <article id='join-us' class='post  '>
+                <header class="post-header">
+                    <h2 class="post-title">Join Us</h2>
+                </header>
+                <section class="post-content">
+                    <p>We are looking for creative and motivated scientists at all levels, including postdocs, graduate students, junior research associates, and undergraduates. If you&rsquo;re interested in:</p>
+<h3 id="research-areas">Research Areas</h3>
+<ul>
+<li>Engineering immune cells for therapeutic applications</li>
+<li>Building machine learning models to design new proteins and DNA regulatory elements to control immune cells</li>
+<li>Understanding development, clonal dynamics, and signal transduction in immune cells</li>
+<li>Developing new high-throughput measurement and genome-editing technologies for primary human cells</li>
+<li>Working at the intersection of systems biology, synthetic biology, and immunology</li>
+</ul>
+<p>Please <a href="">get in touch</a>!</p>
+
+                </section>
+            </article>
+            <div class='post-after light'></div>
+        </div>
+        
+    
+        
+        
+        <div class='post-holder dark'>
+            <article id='contact' class='post  last'>
+                <header class="post-header">
+                    <h2 class="post-title">Contact</h2>
+                </header>
+                <section class="post-content">
+                    <div class="contact-list-container">
+    
+        <div class="contact-item">
+            <i class="fa fa-envelope"></i>
+            <div class="contact-text">
+                <a href="mailto:goodmand@pennmedicine.upenn.edu">goodmand@pennmedicine.upenn.edu</a>
+            </div>
+        </div>
+    
+        <div class="contact-item">
+            <i class="fa fa-map-marker"></i>
+            <div class="contact-text">
+                <a href="">Smilow Center for Translational Research<br>3400 Civic Center Boulevard<br>Philadelphia, PA 19104</a>
+            </div>
+        </div>
+    
+</div>
+
+<p><div class="map-embed full-width">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.5664559918073!2d-75.19335372346155!3d39.94883827151486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c65a7f3bccc7%3A0x9eaa6a2b2d6fe94!2sSmilow%20Center%20for%20Translational%20Research!5e0!3m2!1sen!2sus!4v1709351271346!5m2!1sen!2sus"
+        width="100%" 
+        height="400vh" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div> 
+<div class="building-photo full-width">
+    <img src="/images/smilow_images/smilow-1.jpg" alt="Smilow Center for Translational Research" style="width:100%;height:60vh;object-fit:cover;">
+</div>
+<div class="building-photo full-width">
+    <img src="/images/smilow_images/smilow-2.jpg" alt="Smilow Center for Translational Research" style="width:100%;height:60vh;object-fit:cover;">
+</div>
+<div class="building-photo full-width">
+    <img src="/images/smilow_images/smilow-3.jpg" alt="Smilow Center for Translational Research" style="width:100%;height:60vh;object-fit:cover;">
+</div></p>
+
+                </section>
+            </article>
+            <div class='post-after'></div>
+        </div>
+        
+    
+</main>
+
+
+
+
+<footer class="site-footer">
+  <div class="inner">
+    
+
+    
+
+    
+      <section class="copyright">© Daniel Goodman</section>
+    
+
+    
+      <section>
+        <a href="https://themes.gohugo.io/hugo-scroll/" target="_blank" rel="noopener">Hugo Scroll</a> template
+      </section>
+    
+
+    
+  </div>
+</footer>
+
+
+    
+
+    
+    
+    
+    
+
+    <script src="/js/script.min.e0e987346bbbb9dba86d3972fa7b7f9edbad23c49a5b4e270eb8531b3299c1cc.js" integrity="sha256-4OmHNGu7uduobTly&#43;nt/ntutI8SaW04nDrhTGzKZwcw=" ></script>
+
+    
+    <script>cssVars();</script>
+
+    
+</body>
+</html>

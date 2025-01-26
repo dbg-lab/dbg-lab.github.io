@@ -9,7 +9,7 @@ defaultContentLanguage = "en"
 theme = "hugo-scroll"
 
 # The browser tab name
-title = "Jane Doe - Nutrition Coach & Chef Consultant"
+title = "The Goodman Lab"
 
 # In order to add version information in the page's footer set to true.
 # enableGitInfo = true
@@ -27,7 +27,7 @@ enableEmoji = true
     # services like Twitter or Slack want to generate a preview of a link to your site.
     # See https://gohugo.io/templates/internal#twitter-cards and https://gohugo.io/templates/internal#open-graph.
     # NOT the actual header background image, go to _index.md instead
-    images = ["images/cover-image.jpg"]
+    images = ["images/cover-image.png"]
 
     # When set true, it creates a visual guard (partially transparent rounded box), preventing non-ideal background images from interfering with title/description headings
     # Ideal images are homogenous around the centre and contrasting to the text.
@@ -38,24 +38,24 @@ enableEmoji = true
     # Another "title" :-). This one is used as the site_name on the Hugo's internal
     # opengraph structured data template.
     # See https://ogp.me/ and https://gohugo.io/templates/internal#open-graph.
-    title = "Jane Doe - Nutrition Coach & Chef Consultant"
+    title = "The Goodman Lab for Synthetic Immunology"
 
     # The "description" of your website. This is used in the meta data of your generated html.
-    description = "Nutrition Coach & Chef Consultant"
+    description = "Website for the Goodman Lab for Synthetic Immunology at the University of Pennsylvania"
 
     # Show a menu of languages available
     language_menu = true
 
     # Show also a language menu item for the current language, if false only
     # show the remaining languages
-    show_current_lang = true
+    show_current_lang = false
 
     # A "copyright"-line to be added at the bottom of the page.
     # Hint: Plain HTML is supported in here as well. So you may e.g. add a link to your legal imprint-page.
-    copyright = "© Jane Doe"
+    copyright = "© Daniel Goodman"
 
     # This theme will, by default, inject a design-by-line at the bottom of the page.
-    # You can turn it off, but we would really appreciate if you don’t :-)
+    # You can turn it off, but we would really appreciate if you don't :-)
     hidedesignbyline = false
 
     # The sections of the home page alternate styling. Mark invert as true to swap the styling of the sections
@@ -76,25 +76,19 @@ enableEmoji = true
     showFooterLinks = false
 
     [params.meta]
-        keywords = "some, keywords, for, seo, you, know, google, duckduckgo, and, such"
-
-    [[params.contacts]]
-        label = "phone"
-        value = "+49 1111 555555"
-        url = "tel:+49 1111 555555"
-        icon = "fa fa-phone"
+        keywords = "synthetic immunology, T cells, CAR-T therapy, cancer immunotherapy, synthetic biology, genome engineering, CRISPR, AAV gene delivery, University of Pennsylvania, Penn Medicine, cancer biology, cell therapy, immunotherapy, gene therapy, cellular engineering, cancer research, immune system engineering, adoptive cell therapy, therapeutic T cells, precision medicine"
 
     [[params.contacts]]
         label = "email"
-        value = "mail@janedoe.com"
-        url = "mailto:mail@janedoe.com"
+        value = "goodmand@pennmedicine.upenn.edu"
+        url = "mailto:goodmand@pennmedicine.upenn.edu"
         icon = "fa fa-envelope"
 
     [[params.contacts]]
-        label = "GitHub"
-        value = "github.com/zjedi/hugo-scroll"
-        url = "https://github.com/zjedi/hugo-scroll"
-        icon = "fa-brands fa-github"
+        label = "address"
+        value = "Smilow Center for Translational Research<br>3400 Civic Center Boulevard<br>Philadelphia, PA 19104"
+        url = ""
+        icon = "fa fa-map-marker"
 
     # Add additional contacts here!
     # [[params.contacts]]
@@ -103,15 +97,46 @@ enableEmoji = true
     #     url = ""
     #     icon = ""
 
+    [[params.social_links]]
+        title = "Download my CV"
+        url = "/files/dbg_cv.pdf"  # Adjust this path to where you store your CV
+        icon = "custom-cv-icon"  # Custom class for styling
+        last = true
+
+    [[params.social_links]]
+        title = "Personal Website"
+        url = "http://dbgoodman.com"
+        icon = "fa-solid fa-globe"
+
+    [[params.social_links]]
+        title = "Find my work on Google Scholar"
+        url = "https://scholar.google.com/citations?user=j_1Z_l4AAAAJ"
+        icon = "fa-solid fa-graduation-cap"  # Font Awesome doesn't have Google Scholar
+    
+    [[params.social_links]]
+        title = "Follow me on Twitter"
+        url = "https://twitter.com/dbgoodman"
+        icon = "fa-brands fa-twitter"
+    
+    [[params.social_links]]
+        title = "Fork me on GitHub"
+        url = "https://github.com/dbgoodman"
+        icon = "fa-brands fa-github"
+    
+    [[params.social_links]]
+        title = "Find my work on ORCID"
+        url = "http://orcid.org/0000-0003-3759-6883"
+        icon = "fa-brands fa-orcid"
+    
+    
+    [[params.social_links]]
+        title = "Add me on LinkedIn"
+        url = "https://www.linkedin.com/in/dbgoodman/"
+        icon = "fa-brands fa-linkedin"
+
 # Define additional languages
 [languages]
   [languages.en]
     weight = 10
     languageName = "English"
     contentDir = "content/en"
-
-  [languages.de]
-    title = "Erika Musterfrau - Ernährungshilfe & Kochberatung"
-    weight = 20
-    contentDir = "content/de"
-    languageName = "Deutsch"

@@ -1,0 +1,8 @@
+<div class="grid-item">
+    {{ with .Get "icon" }}
+        <div class="item-icon {{ . }}"></div>
+    {{ end }}
+    <div class="item-content">
+        {{ .Inner | markdownify }}
+    </div>
+</div> 

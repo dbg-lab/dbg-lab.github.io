@@ -1,0 +1,7 @@
+<div class="social-links">
+    {{ range .Site.Params.social_links }}
+        <a href="{{ .url }}" title="{{ .title }}" target="_blank" rel="noopener">
+            <i class="{{ .icon }}"></i>
+        </a>
+    {{ end }}
+</div> 
