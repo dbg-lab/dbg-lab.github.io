@@ -1,0 +1,10 @@
+<div class="contact-list-container">
+    {{ range .Site.Params.contacts }}
+        <div class="contact-item">
+            <i class="{{ .icon }}"></i>
+            <div class="contact-text">
+                <a href="{{ .url | safeURL }}">{{ replace .value "\n" "<br>" | safeHTML }}</a>
+            </div>
+        </div>
+    {{ end }}
+</div>
