@@ -1,6 +1,18 @@
 <!-- A partial to be overwritten by the user.
      Its content will appear before the closing </head>-tag -->
 
+<!-- Import fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&family=Roboto+Condensed:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/css/custom.css">
+
+<!-- Custom favicon links -->
+{{ with resources.Get "images/apple-touch-icon.png" }}<link rel="apple-touch-icon" sizes="180x180" href="{{ .RelPermalink }}" />{{ end }}
+{{ with resources.Get "images/favicon.svg" }}<link rel="icon" type="image/svg+xml" href="{{ .RelPermalink }}" />{{ end }}
+{{ range seq 9 4 }}{{ $size := pow 2 . }}{{ $file := replace "images/favicon-##x##.png" "##" $size }}{{ with resources.Get $file }}
+<link rel="icon" type="{{ .MediaType.Type }}" sizes="{{- $size -}}x{{- $size -}}" href="{{ .RelPermalink }}" />{{ end }}{{ end }}
 
 <!-- Custom CSS via inline styles
      You may use this template to add custom CSS to your site like so: -->
@@ -102,9 +114,6 @@ body #site-head #blog-logo::before {
     margin-bottom: 3vh !important;  /* Add space below the menu */
 }
 
-/* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
-
 /* Typography enhancements with increased specificity */
 body .post-content h1,
 .post h1,
@@ -193,7 +202,6 @@ body #site-head h3 {
     margin-bottom: 4rem !important;
 }
 
-
 .post-content img[alt="profile-photo"] {
     width: 250px !important;
     height: auto !important;
@@ -208,14 +216,6 @@ body #site-head h3 {
     height: 0 !important;  /* No extra height */
     margin: 0 !important;
     padding: 0 !important;
-}
-
-/* Import Inter font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&family=Roboto+Condensed:wght@400;700&display=swap');
-
-/* Apply Inter to all text */
-body {
-    font-family: 'Inter', sans-serif !important;
 }
 
 /* Main title styling */
@@ -326,8 +326,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
-
-
 
 /* Full-width headers */
 .post-content h1,
@@ -543,26 +541,5 @@ body {
 .social-links a:hover .custom-cv-icon {
     opacity: 0.8;
 }
+
 </style>
-
-<!-- Custom CSS via "custom.css"-file
-     If you would rather place your custom CSS into
-     a separate file, create a "custom.css" in your
-     local "static/css"-directory. Then add a <link>-tag
-     referencing your "custom.css" like so: -->
-
-<link rel="stylesheet" href="/css/custom.css">
-
-<!-- Custom CSS: Color Codes
-     You may checkout https://htmlcolorcodes.com/ to get those
-     weird color codes (like "#22343A") ;-). -->
-
-<!-- Custom link-tags for different icons
-     Generated via https://favicon.io/favicon-generator/ -->
-
-
-
-{{ with resources.Get "images/apple-touch-icon.png" }}<link rel="apple-touch-icon" sizes="180x180" href="{{ .RelPermalink }}" />{{ end }}
-{{ with resources.Get "images/favicon.svg" }}<link rel="icon" type="image/svg+xml" href="{{ .RelPermalink }}" />{{ end }}
-{{ range seq 9 4 }}{{ $size := pow 2 . }}{{ $file := replace "images/favicon-##x##.png" "##" $size }}{{ with resources.Get $file }}
-<link rel="icon" type="{{ .MediaType.Type }}" sizes="{{- $size -}}x{{- $size -}}" href="{{ .RelPermalink }}" />{{ end }}{{ end }}
