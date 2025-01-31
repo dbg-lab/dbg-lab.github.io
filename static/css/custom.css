@@ -96,3 +96,12 @@ body #site-head h1, body #site-head h2, body #site-head h3 {
     font-family: 'Inter', sans-serif !important;
     font-weight: 600 !important;
 } 
+
+/* Disable hyphenation across the site */
+*,
+*::before,
+*::after {
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
