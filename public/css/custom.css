@@ -21,7 +21,7 @@
 }
 
 #site-head.withCenteredImage {
-    background-image: url('/images/cover-image.png') !important;
+    background-image: url('/images/cover-image.jpg') !important;
     background-position: center !important;
     background-size: cover !important;
 }
@@ -67,4 +67,32 @@
     #blog-logo img {
         max-height: 100px;
     }
+}
+
+/* Set Inter as the default font for all body text */
+body,
+.blog-description,
+.post-content,
+.post-excerpt,
+.post-meta,
+p,
+.item-content,
+.grid-item {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+/* Use Oswald only for main section headings */
+h1, h2, h3,
+.post h1, .post h2, .post h3,
+body .post-content h1, body .post-content h2, body .post-content h3,
+body #site-head h1, body #site-head h2, body #site-head h3 {
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: 500 !important;
+}
+
+/* Grid items should use Inter */
+.grid-item strong {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600 !important;
 } 
