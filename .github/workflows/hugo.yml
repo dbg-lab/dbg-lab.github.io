@@ -34,8 +34,11 @@ jobs:
       - name: Build
         run: hugo --minify
 
-      - name: Create CNAME
-        run: echo 'goodman-lab.org' > public/CNAME
+      - name: List public directory
+        run: ls -la public/
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
@@ -43,6 +46,7 @@ jobs:
           name: github-pages
           path: ./public
           retention-days: 1
+          if-no-files-found: error
 
   deploy:
     needs: build
