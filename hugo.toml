@@ -3,8 +3,6 @@ baseURL = "https://dbg-lab.github.io/"
 # This is a "one page"-website, so we do not need these kinds of pages...
 disableKinds = ["section", "taxonomy", "term", "RSS", "robotsTXT"]
 
-defaultContentLanguage = "en"
-
 # The name of this wonderful theme ;-).
 theme = "hugo-scroll"
 
@@ -44,7 +42,7 @@ enableEmoji = true
     description = "Website for the Goodman Lab for Synthetic Immunology at the University of Pennsylvania"
 
     # Show a menu of languages available
-    language_menu = true
+    language_menu = false
 
     # Show also a language menu item for the current language, if false only
     # show the remaining languages
@@ -133,10 +131,3 @@ enableEmoji = true
         title = "Add me on LinkedIn"
         url = "https://www.linkedin.com/in/dbgoodman/"
         icon = "fa-brands fa-linkedin"
-
-# Define additional languages
-[languages]
-  [languages.en]
-    weight = 10
-    languageName = "English"
-    contentDir = "content/en"
