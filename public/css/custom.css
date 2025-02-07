@@ -1,24 +1,79 @@
 :root {
+    /* Typography */
+    --font-primary: 'Inter', sans-serif;
+    --font-display: 'Oswald', sans-serif;
+    
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+
     /* Main colors */
-    --cover-text-color: #0C5797 !important;
-    --highlight: #4FB0E5 !important;
-    --highlight-contrast: #F4F4F5 !important;
+    --cover-text-color: #0C5797;
+    --highlight: #4FB0E5;
+    --highlight-contrast: #F4F4F5;
     
     /* Section colors */
-    --section-light-bg-color: #F4F4F5 !important;
-    --section-light-text-color: #0C5797 !important;
-    --section-dark-bg-color: #0C5797 !important;
-    --section-dark-text-color: #F4F4F5 !important;
+    --section-light-bg-color: #F4F4F5;
+    --section-light-text-color: #0C5797;
+    --section-dark-bg-color: #0C5797;
+    --section-dark-text-color: #F4F4F5;
     
     /* Navigation and interactive elements */
-    --sticky-menu-text-color: #4FB0E5 !important;
-    --highlight-inverse: #C90E5B !important;
-    --highlight-inverse-contrast: #F4F4F5 !important;
+    --sticky-menu-text-color: #4FB0E5;
+    --highlight-inverse: #C90E5B;
+    --highlight-inverse-contrast: #F4F4F5;
 
     /* Footer */
-    --footer-color-background: #0C5797 !important;
-    --footer-color: #F4F4F5 !important;
-}
+    --footer-color-background: #0C5797;
+    --footer-color: #F4F4F5;
+    
+    /* Common colors */
+    --color-background: #f6f6f3;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    
+    /* Shadows */
+    --shadow-sm: 0 0 15px 4px rgba(246, 246, 243, 0.75);
+    --shadow-md: 0 0 20px 6px rgba(246, 246, 243, 0.75);
+    --shadow-lg: 0 0 30px 10px rgba(246, 246, 243, 0.75);
+
+    /* Font families */
+    --font-primary: 'Inter', sans-serif;
+    --font-display: 'Oswald', sans-serif;
+    
+    /* Base sizes */
+    --text-base-desktop: 1.7rem;  /* Original base size */
+    --text-base: var(--text-base-desktop);  /* Current base size */
+    
+    /* Type scale multipliers */
+    --scale-small: 0.9;      /* For smaller text */
+    --scale-h3: 1.4;        /* For h3 and grid titles */
+    --scale-h2: 1.8;          /* For h2 */
+    --scale-title: 2.2;     /* For main titles */
+    
+    /* Responsive scale multipliers */
+    --scale-tablet: 0.9;   /* For tablet breakpoint */
+    --scale-mobile: 0.8;   /* For mobile breakpoint */
+    
+    /* Derived font sizes */
+    --text-small: calc(var(--text-base) * var(--scale-small));
+    --text-body: var(--text-base);
+    --text-grid-title: calc(var(--text-base) * var(--scale-h3));
+    --text-h3: calc(var(--text-base) * var(--scale-h3));
+    --text-h2: calc(var(--text-base) * var(--scale-h2));
+    --text-title: calc(var(--text-base) * var(--scale-title));
+    
+    /* Line heights */
+    --leading-tight: 1.2;
+    --leading-normal: 1.4;
+    --leading-loose: 1.6;
 
 #site-head.withCenteredImage {
     background-image: url('/images/cover-image.jpg') !important;
@@ -78,24 +133,37 @@ body,
 p,
 .item-content,
 .grid-item {
-    font-family: 'Inter', sans-serif !important;
-    font-weight: 400 !important;
+    font-family: var(--font-primary);
+    font-weight: var(--weight-regular);
+    font-size: var(--text-body);
 }
 
-/* Use Oswald only for main section headings */
+/* Use Oswald for main section headings */
 h1, h2, h3,
 .post h1, .post h2, .post h3,
-body .post-content h1, body .post-content h2, body .post-content h3,
-body #site-head h1, body #site-head h2, body #site-head h3 {
-    font-family: 'Oswald', sans-serif !important;
-    font-weight: 500 !important;
+body .post-content h1, 
+body .post-content h2, 
+body .post-content h3,
+body #site-head h1, 
+body #site-head h2, 
+body #site-head h3 {
+    font-family: var(--font-display);
+    font-weight: var(--weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
 }
 
 /* Grid items should use Inter */
 .grid-item strong {
-    font-family: 'Inter', sans-serif !important;
-    font-weight: 600 !important;
-} 
+    font-family: var(--font-display);
+    font-size: var(--text-grid-title);
+    font-weight: var(--weight-regular);
+    line-height: var(--leading-tight);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
 
 /* Disable hyphenation across the site */
 *,
@@ -104,4 +172,662 @@ body #site-head h1, body #site-head h2, body #site-head h3 {
     -webkit-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
+}
+
+/* OLD CSS MOVED FROM Custom_head.html */
+
+/* Force override with !important */
+body #site-head #blog-logo * img,
+body #site-head #blog-logo img,
+#blog-logo img,
+img[src*="web_hero_logo"] {
+    max-height: 300px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    display: inline-block !important;
+    margin: 0 auto !important;
+    box-shadow: 0 0 30px 10px #f6f6f3 !important;
+}
+
+body #site-head #blog-logo {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    padding: 0rem !important;
+    z-index: 2 !important;
+    background-color: #f6f6f3 !important;
+
+    text-align: center !important;
+    box-sizing: border-box !important;
+}
+
+body #site-head #blog-logo::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100vw !important;
+    height: 100% !important;
+    background-color: #f6f6f3 !important;
+    z-index: -1 !important;
+}
+
+@media (max-width: 1200px) {
+    body #site-head #blog-logo * img,
+    body #site-head #blog-logo img,
+    #blog-logo img,
+    img[src*="web_hero_logo"] {
+        max-height: 250px !important;
+        box-shadow: 0 0 25px 8px #f6f6f3 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    body #site-head #blog-logo * img,
+    body #site-head #blog-logo img,
+    #blog-logo img,
+    img[src*="web_hero_logo"] {
+        max-height: 200px !important;
+        box-shadow: 0 0 20px 6px #f6f6f3 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    body #site-head #blog-logo * img,
+    body #site-head #blog-logo img,
+    #blog-logo img,
+    img[src*="web_hero_logo"] {
+        max-height: 150px !important;
+        box-shadow: 0 0 15px 4px #f6f6f3 !important;
+    }
+}
+
+/* Header positioning */
+#site-head {
+    position: relative !important;
+    height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+#site-head.withCenteredImage {
+    background-image: url('/images/cover-image.png') !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+/* Header arrow with proper centering */
+#header-arrow {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 2 !important;  /* Above background but below buttons */
+    text-shadow: 0 0 10px rgba(0,0,0,0.3) !important;
+    cursor: pointer !important;
+    color: var(--section-light-text-color) !important;
+}
+
+#header-arrow:hover {
+    color: var(--highlight-inverse) !important;
+}
+
+/* Ensure the navigation menu doesn't overlap */
+#site-head .site-menu {
+    margin-bottom: 3vh !important;  /* Add space below the menu */
+}
+
+/* Handle text colors for both light and dark sections */
+.post.first h1, .post.first h2, .post.first h3,
+.post.even h1, .post.even h2, .post.even h3 {
+    color: var(--section-light-text-color) !important;
+}
+
+.post.odd h1, .post.odd h2, .post.odd h3 {
+    color: var(--section-dark-text-color) !important;
+}
+
+/* Make lists more readable */
+.post-content ul {
+    margin-left: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.post-content ul li {
+    margin-bottom: 0.5rem !important;
+}
+
+/* Profile layout using markdown-compatible elements */
+.post-content img[alt="profile-photo"] {
+    width: 250px !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    float: left !important;
+    margin: 0 4rem 3rem 0 !important;
+}
+
+/* Profile text styling */
+.post-content img[alt="profile-photo"] + h3,
+.post-content img[alt="profile-photo"] + h3 + p {
+    line-height: 1.8 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Clear float before any new section heading */
+.post-content h1,
+.post-content h2.section-header {
+    clear: both !important;
+}
+
+/* Clear float after the profile section */
+.profile-end {
+    clear: both !important;
+    margin-bottom: 4rem !important;
+}
+
+.post-content img[alt="profile-photo"] {
+    width: 250px !important;
+    height: auto !important;
+    border-radius: 32px !important;
+    float: left !important;
+    margin: 0 4rem 3rem 0 !important;
+}
+
+/* Force clear float */
+.clear-float {
+    clear: both !important;
+    height: 0 !important;  /* No extra height */
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Main title styling */
+.post-content h1 {
+    font-weight: 800 !important;  /* Extra bold */
+}
+
+/* Regular text */
+.post-content p {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;  /* Regular */
+}
+
+/* Profile layout */
+.post-content img[alt="profile-photo"] {
+    width: 250px !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    float: left !important;
+    margin: 0 4rem 3rem 0 !important;
+}
+
+/* Force clear float */
+.clear-float {
+    clear: both !important;
+}
+
+/* Affiliations container */
+.affiliations-container {
+    background-color: rgba(246, 246, 243, 0.75) !important;
+    border-radius: 12px !important;
+    padding: 1rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 70% !important;
+    max-width: 1000px !important;
+    margin: 0 auto 2vh auto !important;
+    box-shadow: 0 0 30px 10px rgba(246, 246, 243, 0.75) !important;
+}
+
+.affiliation-logo {
+    height: auto !important;
+    width: 28% !important;
+    max-height: 40px !important;
+    object-fit: contain !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .affiliations-container {
+        width: 80% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .affiliations-container {
+        width: 90% !important;
+        padding: 0.2rem !important;
+    }
+    .affiliation-logo {
+        max-height: 35px !important;
+    }
+}
+
+/* Transition section */
+.transition-section {
+    position: absolute !important;
+    bottom: 0 !important;
+    height: 15vh !important;
+    background: linear-gradient(180deg, 
+        transparent 0%,
+        rgba(246, 246, 243, 0.1) 40%,
+        rgba(246, 246, 243, 0.2) 100%
+    ) !important;
+    z-index: 10 !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: flex-end !important;
+}
+
+/* Hide content below the fold */
+.post-content {
+    margin-top: 0 !important;  /* Remove extra top margin */
+}
+
+.post-content h1 {
+    margin-bottom: 0 !important;  /* Remove bottom margin from titles */
+    padding-top: 2rem !important;  /* Add some space above instead */
+}
+
+/* Basic container */
+.post-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Full-width headers */
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+/* Grid container */
+.grid-container {
+    display: grid;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-md) 0;
+}
+
+/* Grid items */
+.grid-item {
+    display: block;
+    min-width: 0;
+}
+
+/* Icon styling */
+.item-icon {
+    display: block;
+    width: 80%;
+    aspect-ratio: 1;
+    margin: 0 auto var(--spacing-md);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Item content */
+.item-content {
+    text-align: left;
+    font-size: var(--text-small);
+    
+}
+
+/* Grid item titles */
+.grid-item strong {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--text-grid-title);
+}
+
+/* Individual icons */
+.receptor-icon { background-image: url('/images/icons/icons_receptor_design.svg'); }
+.genome-icon { background-image: url('/images/icons/icons_genome_editing.svg'); }
+.delivery-icon { background-image: url('/images/icons/icons_viral_gene_delivery.svg'); }
+.systems-icon { background-image: url('/images/icons/icons_systems_biology.svg'); }
+.ml-icon { background-image: url('/images/icons/icons_machine_learning.svg'); }
+.protein-icon { background-image: url('/images/icons/icons_protein_design.svg'); }
+.dna-icon { background-image: url('/images/icons/icons_dna_barcoding.svg'); }
+.synthetic-icon { background-image: url('/images/icons/icons_synthetic_biology.svg'); }
+
+/* Profile card styles */
+.profile-container {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0 3rem 0;
+}
+
+    .profile-photo {
+    width: 200px;  /* Reduced from 250px */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+/* Profile name - more specific selector to override defaults */
+.profile-container .profile-name,
+.post-content .profile-container .profile-name,
+body .post-content .profile-container .profile-name {
+    font-family: var(--font-display);
+    font-size: calc(var(--text-h2));
+    font-weight: var(--weight-light);
+    line-height: var(--leading-tight);
+    text-transform: uppercase;
+    letter-spacing: 0.02em !important; 
+    margin: 0 0 1.5rem 0;
+}
+
+.profile-title {
+    font-family: var(--font-primary);
+    font-size: var(--text-small);
+    font-weight: var(--weight-light);
+    line-height: var(--leading-normal);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+/* Remove asterisks from profile titles */
+.profile-title::before {
+    content: none !important;
+}
+
+.profile-details {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.profile-details li {
+    font-family: var(--font-primary);
+    font-size: var(--text-small);
+    font-weight: var(--weight-light);
+    line-height: var(--leading-normal);
+    margin-bottom: 0.5rem;
+}
+
+.profile-bio {
+    font-family: var(--font-primary);
+    font-size: var(--text-small);
+    line-height: var(--leading-normal);
+    margin-top: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;  /* Slightly more space between contact items */
+}
+
+.contact-item i {
+    flex-shrink: 0;
+    margin-top: 0.3rem;
+}
+
+.contact-text {
+    flex-grow: 1;
+}
+
+.contact-text a {
+    text-decoration: none;
+}
+
+.full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-bottom: 0;
+}
+
+.building-photo img {
+    display: block;
+}
+
+.map-embed iframe {
+    display: block;
+}
+
+/* Contact section spacing */
+.post-content h1 {
+    margin-bottom: 4rem !important;  /* Increased spacing below CONTACT */
+}
+
+.contact-list-container {
+    margin-bottom: 6rem !important;  /* Large space between address and first image */
+}
+
+.social-links {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;  /* Evenly space icons */
+    align-items: center;
+    width: 100%;  /* Full width */
+    max-width: 800px;  /* Match text width */
+    padding: 0 30px;  /* Match indentation */
+    margin: 0 auto;  /* Center the container */
+}
+
+.social-links a {
+    color: inherit;
+    text-decoration: none;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+}
+
+.icon-separator {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .social-links {
+        padding: 0 15px;  /* Smaller padding on mobile */
+    }
+}
+
+/* Add styles for custom CV icon */
+.custom-cv-icon {
+    width: 1em;  /* Match font-awesome icon size */
+    height: 1em;
+    mask: url('/images/icons/icons_file-cv.svg') no-repeat center;
+    -webkit-mask: url('/images/icons/icons_file-cv.svg') no-repeat center;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    background-color: currentColor;  /* This will match the current text color */
+    display: inline-block;
+}
+
+/* Ensure hover effect matches other icons */
+.social-links a:hover .custom-cv-icon {
+    opacity: 0.8;
+}
+
+/* Navigation styles */
+.nav-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-background);
+    z-index: 1000;
+    padding: var(--spacing-sm) 0;
+}
+
+.site-menu {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+.site-menu a.btn {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: var(--text-subtitle);
+    font-weight: var(--weight-medium);
+    transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    position: relative;
+    z-index: 1000;
+}
+
+.site-menu a.btn:hover {
+    color: var(--highlight-inverse);
+}
+
+.nav-links a:hover {
+    color: var(--highlight-inverse);
+}
+
+/* Ensure the background image is behind the arrow */
+#site-head.withCenteredImage {
+    z-index: 1 !important;
+}
+
+/* Typography utility classes */
+.text-title {
+    font-family: var(--font-display);
+    font-size: var(--text-title);
+    font-weight: var(--weight-medium);
+    line-height: var(--leading-tight);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--section-light-text-color);
+}
+
+.text-subtitle {
+    font-family: var(--font-display);
+    font-size: var(--text-h2);  /* Updated from text-subtitle */
+    font-weight: var(--weight-medium);
+    line-height: var(--leading-tight);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.text-body {
+    font-family: var(--font-primary);
+    font-size: var(--text-body);  /* Updated from text-base */
+    font-weight: var(--weight-light);
+    line-height: var(--leading-normal);
+}
+
+.text-small {
+    font-family: var(--font-primary);
+    font-size: var(--text-small);  /* Updated from text-sm */
+    font-weight: var(--weight-light);
+    line-height: var(--leading-normal);
+}
+
+/* Apply typography system consistently */
+/* Main headings */
+h1, 
+.section-title,
+#site-head h1,
+.blog-title {
+    @extend .text-title;
+}
+
+/* Subheadings */
+h2, h3,
+.subsection-title,
+#site-head h2,
+#site-head h3,
+.blog-description {
+    @extend .text-subtitle;
+}
+
+/* Body text */
+body,
+p,
+.post-content,
+.post-excerpt,
+.post-meta,
+.nav-links {
+    @extend .text-body;
+}
+
+/* Small text */
+.item-content,
+.grid-item,
+.site-footer,
+.site-menu a.btn {
+    @extend .text-small;
+}
+
+/* Keep structural styles separate */
+h1, 
+.section-title {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+h3 {
+    margin-top: 2rem;
+}
+
+/* Responsive typography adjustments */
+@media screen and (max-width: 768px) {
+    :root {
+        --text-base: calc(var(--text-base-desktop) * var(--scale-tablet));
+    }
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        --text-base: calc(var(--text-base-desktop) * var(--scale-mobile));
+    }
+}
+
+/* Update the subtitle styles to be more specific */
+h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-h2);
+    font-weight: var(--weight-medium);
+    line-height: var(--leading-tight);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-h3);
+    font-weight: var(--weight-regular);  /* Lighter than h2 */
+    line-height: var(--leading-tight);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* Keep the responsive adjustments for mobile */
+@media screen and (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;  /* Stack vertically only on mobile */
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+    }
 }
