@@ -54,9 +54,9 @@
     
     /* Type scale multipliers */
     --scale-small: 0.9;      /* For smaller text */
-    --scale-h3: 1.4;        /* For h3 and grid titles */
-    --scale-h2: 1.8;          /* For h2 */
-    --scale-title: 2.2;     /* For main titles */
+    --scale-h3: 1.6;        /* For h3 and grid titles */
+    --scale-h2: 2.0;          /* For h2 */
+    --scale-title: 2.5;     /* For main titles */
     
     /* Responsive scale multipliers */
     --scale-tablet: 0.9;   /* For tablet breakpoint */
@@ -74,6 +74,7 @@
     --leading-tight: 1.2;
     --leading-normal: 1.4;
     --leading-loose: 1.6;
+}
 
 #site-head.withCenteredImage {
     background-image: url('/images/cover-image.jpg') !important;
