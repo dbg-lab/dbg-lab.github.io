@@ -14,14 +14,17 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: recursive
-
+      - name: Checkout
+        uses: actions/checkout@v4
+      
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
@@ -39,6 +42,7 @@ jobs:
         with:
           name: github-pages
           path: ./public
+          retention-days: 1
 
   deploy:
     needs: build
@@ -49,4 +53,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
