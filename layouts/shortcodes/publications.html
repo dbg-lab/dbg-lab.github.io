@@ -1,0 +1,140 @@
+<div class="publications-section">
+    <div class="section-header" onclick="toggleSection('selected')" role="button" tabindex="0">
+        <h3><i class="fas fa-chevron-down" id="selected-chevron"></i> Selected Publications</h3>
+    </div>
+    <div class="publications-container" id="selected-publications">
+        {{ $selected_publications := .Site.Data.selected_publications }}
+        <!-- Debug info -->
+        {{ if $selected_publications }}
+            <!-- Found {{ len $selected_publications }} selected publications -->
+        {{ else }}
+            <!-- No selected publications found -->
+        {{ end }}
+        {{ template "pub-list" (dict "publications" $selected_publications) }}
+    </div>
+
+    <div class="section-header" onclick="toggleSection('all')" role="button" tabindex="0">
+        <h3><i class="fas fa-chevron-right" id="all-chevron"></i> All Publications</h3>
+    </div>
+    <div class="publications-container" id="all-publications" style="display: none;">
+        {{ $publications := .Site.Data.publications }}
+        <!-- Debug info -->
+        {{ if $publications }}
+            <!-- Found {{ len $publications }} total publications -->
+        {{ else }}
+            <!-- No publications found -->
+        {{ end }}
+        {{ template "pub-list" (dict "publications" $publications) }}
+    </div>
+
+    <div class="section-header" onclick="toggleSection('patents')" role="button" tabindex="0">
+        <h3><i class="fas fa-chevron-right" id="patents-chevron"></i> Patents</h3>
+    </div>
+    <div class="publications-container" id="patents-publications" style="display: none;">
+        {{ $patents := .Site.Data.patents }}
+        {{ template "pub-list" (dict "publications" $patents) }}
+    </div>
+</div>
+
+{{ define "pub-list" }}
+    <!-- Get unique years -->
+    {{ $years := slice }}
+    {{ range .publications }}
+        {{ if not (in $years .year) }}
+            {{ $years = $years | append .year }}
+        {{ end }}
+    {{ end }}
+    
+    <!-- Sort years numerically in descending order -->
+    {{ $sortedYears := sort $years "value" "desc" }}
+    
+    <!-- Display publications by year -->
+    {{ range $sortedYears }}
+        {{ $year := . }}
+        <div class="year-section">
+            <h3 class="year-heading font-display text-small">{{ $year }}</h3>
+            {{ range $.publications }}
+                {{ if eq .year $year }}
+                <div class="publication-entry text-small">
+                    <div class="publication-row">
+                        <div class="publication-links">
+                            {{ if .doi }}
+                            <a href="https://doi.org/{{ .doi }}" target="_blank">
+                                <i class="ai ai-doi"></i>
+                            </a>
+                            {{ end }}
+                            {{ if .pdf }}
+                            <a href="{{ .pdf }}" target="_blank">
+                                <i class="fas fa-file-pdf"></i>
+                            </a>
+                            {{ end }}
+                            {{ if .url }}
+                            <a href="{{ .url }}" target="_blank">
+                                <i class="fas fa-scroll"></i>
+                            </a>
+                            {{ end }}
+                        </div>
+                        <div class="publication-content">
+                            <div class="publication-title">{{ .title }}</div>
+                            <div class="publication-details">
+                                {{ $authors := .author | replaceRE "{highlight}([^{]+){/highlight}" "<u>$1</u>" | safeHTML }}
+                                {{ $authors }}. 
+                                {{ if .journal }}
+                                    <u>{{ .journal }} {{ .volume }}({{ .number }})</u>: {{ .pages }} ({{ .year }})
+                                {{ else }}
+                                    {{ .status }} ({{ .year }})
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            {{ end }}
+        </div>
+    {{ end }}
+{{ end }}
+
+<script>
+function toggleSection(type) {
+    const selectedSection = document.getElementById(`${type}-publications`);
+    const selectedChevron = document.getElementById(`${type}-chevron`);
+    
+    if (selectedSection.style.display === 'none') {
+        // Close any open section first
+        const sections = document.querySelectorAll('.publications-container');
+        const chevrons = document.querySelectorAll('.section-header i');
+        
+        sections.forEach(section => section.style.display = 'none');
+        chevrons.forEach(chevron => {
+            chevron.classList.remove('fa-chevron-down');
+            chevron.classList.add('fa-chevron-right');
+        });
+        
+        // Open the clicked section
+        selectedSection.style.display = 'block';
+        selectedChevron.classList.remove('fa-chevron-right');
+        selectedChevron.classList.add('fa-chevron-down');
+    } else {
+        // Close the clicked section
+        selectedSection.style.display = 'none';
+        selectedChevron.classList.remove('fa-chevron-down');
+        selectedChevron.classList.add('fa-chevron-right');
+    }
+}
+
+// Initialize with selected publications shown
+document.addEventListener('DOMContentLoaded', () => {
+    // Make sure selected section is visible and has down chevron
+    const selectedSection = document.getElementById('selected-publications');
+    const selectedChevron = document.getElementById('selected-chevron');
+    
+    selectedSection.style.display = 'block';
+    selectedChevron.classList.remove('fa-chevron-right');
+    selectedChevron.classList.add('fa-chevron-down');
+    
+    // Ensure other sections are closed
+    ['all-publications', 'patents-publications'].forEach(id => {
+        document.getElementById(id).style.display = 'none';
+    });
+});
+</script> 

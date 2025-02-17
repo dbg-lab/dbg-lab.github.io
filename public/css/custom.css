@@ -53,6 +53,7 @@
     --text-base: var(--text-base-desktop);  /* Current base size */
     
     /* Type scale multipliers */
+    --scale-xsmall: 0.7;
     --scale-small: 0.9;      /* For smaller text */
     --scale-h3: 1.6;        /* For h3 and grid titles */
     --scale-h2: 2.0;          /* For h2 */
@@ -63,6 +64,7 @@
     --scale-mobile: 0.8;   /* For mobile breakpoint */
     
     /* Derived font sizes */
+    --text-xsmall: calc(var(--text-base) * var(--scale-xsmall));
     --text-small: calc(var(--text-base) * var(--scale-small));
     --text-body: var(--text-base);
     --text-grid-title: calc(var(--text-base) * var(--scale-h3));
@@ -832,3 +834,155 @@ h3 {
         height: 200px;
     }
 }
+
+/* Publications styling */
+.publications-container {
+    margin: var(--spacing-md) 0;
+}
+
+.publication-entry {
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.publication-content {
+    flex: 1;
+    padding-right: var(--spacing-md);
+    border-right: 1px solid var(--color-border);
+}
+
+.publication-title {
+    font-weight: bold;
+    margin-bottom: var(--spacing-xs);
+}
+
+.publication-details {
+    margin-bottom: var(--spacing-xs);
+}
+
+.publication-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.publication-links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Toggle mechanism */
+.publications-toggle {
+    margin-bottom: var(--spacing-md);
+}
+
+.publications-toggle button {
+    background: none;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-family: var(--font-primary);
+    font-size: var(--text-small);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.publications-toggle button:hover {
+    background: var(--highlight);
+    color: var(--highlight-contrast);
+}
+
+.publications-toggle button.active {
+    background: var(--highlight);
+    color: var(--highlight-contrast);
+}
+
+/* Hide full publications by default */
+#all-publications {
+    display: none;
+}
+
+/* Publication section styles */
+.section-header {
+    cursor: pointer;
+    margin: var(--spacing-md) 0;
+    padding: var(--spacing-sm) 0;
+}
+
+.section-header:hover {
+    opacity: 0.8;
+}
+
+.section-header h3 {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin: 0;
+}
+
+.section-header i {
+    width: 0.8em;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.publications-container {
+    margin-top: var(--spacing-md);
+}
+
+.year-heading {
+    text-decoration: none;
+    font-size: var(--text-xsmall);
+    letter-spacing: 0.01em;
+}
+
+.publication-entry {
+    margin-bottom: var(--spacing-xs);
+}
+
+.publication-title {
+    font-weight: bold;
+    margin-bottom: var(--spacing-xs);
+}
+
+.publication-details {
+    margin-bottom: var(--spacing-xs);
+}
+
+.publication-links {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.publication-links a {
+    text-decoration: none;
+}
+
+.publication-row {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+}
+
+.publication-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding-top: var(--spacing-xs);
+}
+
+.publication-content {
+    flex: 1;
+}
+
+.publication-links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.pdf-link {
+    margin-left: 0.5em;
+    color: #d40000;  /* PDF red */
+  }
+  .pdf-link:hover {
+    color: #ff0000;
+  }

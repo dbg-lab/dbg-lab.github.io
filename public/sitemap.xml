@@ -3,11 +3,5 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-  </url><url>
-    <loc>http://localhost:1313/license/</loc>
-  </url><url>
-    <loc>http://localhost:1313/services/</loc>
-  </url><url>
-    <loc>http://localhost:1313/legal/</loc>
   </url>
 </urlset>
