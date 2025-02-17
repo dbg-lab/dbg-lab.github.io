@@ -79,9 +79,16 @@
 }
 
 #site-head.withCenteredImage {
+    background-color: #f6f6f3;
     background-image: url('/images/cover-image.jpg') !important;
     background-position: center !important;
     background-size: cover !important;
+    background-repeat: no-repeat !important;
+    /* Add this to help with rendering */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 #blog-logo {
@@ -253,12 +260,6 @@ body #site-head #blog-logo::before {
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
-}
-
-#site-head.withCenteredImage {
-    background-image: url('/images/cover-image.png') !important;
-    background-position: center !important;
-    background-size: cover !important;
 }
 
 /* Header arrow with proper centering */
@@ -696,11 +697,6 @@ body .post-content .profile-container .profile-name {
 
 .nav-links a:hover {
     color: var(--highlight-inverse);
-}
-
-/* Ensure the background image is behind the arrow */
-#site-head.withCenteredImage {
-    z-index: 1 !important;
 }
 
 /* Typography utility classes */
