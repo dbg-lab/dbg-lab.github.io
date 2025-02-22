@@ -16,4 +16,4 @@ We are looking for creative and motivated scientists at all levels, including *p
 ### Mentorship and Career Development
 The Goodman Lab is committed to fostering career development in a supportive research environment. Dr. Goodman’s prior trainees have gone on to succeed in PhD and MD programs, join and found biotechnology startups, and pursue academic careers. Our lab culture is built on shared scientific curiosity, a mission to advance medicine through immunology, and building an environment where team members support one another while pursuing scientific excellence in a dynamic and welcoming research community.
 
-###Please [get in touch](mailto:recruitment@goodman-lab.org)!
+### Please [get in touch](mailto:recruitment@goodman-lab.org)!
