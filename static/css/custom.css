@@ -982,3 +982,8 @@ h3 {
   .pdf-link:hover {
     color: #ff0000;
   }
+
+.post.last {
+margin-bottom: 0;  /* Remove bottom margin from last post */
+padding-bottom: 0;  /* Remove bottom padding from last post */
+}

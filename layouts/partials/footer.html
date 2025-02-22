@@ -1,0 +1,33 @@
+{{ $headless := .Site.GetPage "/homepage" }}
+{{ $sections := $headless.Resources.ByType "page" }}
+{{ $sections := cond .Site.BuildDrafts $sections (where $sections "Draft" "==" false) }}
+
+<footer class="site-footer">
+  <div class="inner">
+    {{ if ne .Site.Params.footer.showFooterLinks false }}
+    <section class="links">
+      <ol>
+      {{ range where $sections ".Params.footer_menu" "eq" true }}
+        <li>
+          <a href="{{ relLangURL .Params.detailed_page_path }}">{{ .Params.footer_menu_title }}</a>
+        </li>
+      {{ end }}
+      </ol>
+    </section>
+    <hr />
+    {{ end }}
+
+    {{ with .Site.Params.copyright }}
+      <section class="copyright">{{ . | safeHTML }}</section>
+    {{ end }}
+
+    {{ if ne .Site.Params.hidedesignbyline true }}
+      <section>
+        <a href="https://themes.gohugo.io/hugo-scroll/" target="_blank" rel="noopener">Hugo Scroll</a> template | 
+        <a href="https://github.com/dbg-lab/dbg-lab.github.io" target="_blank" rel="noopener">
+          <i class="fa-brands fa-github"></i> Hosted on Github-Pages
+        </a>
+      </section>
+    {{ end }}
+  </div>
+</footer> 
