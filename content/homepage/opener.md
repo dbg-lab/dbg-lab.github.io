@@ -4,7 +4,7 @@ weight: 1
 header_menu: true
 ---
 
-We are a **brand-new lab** at the [University of Pennsylvania](https://www.upenn.edu), starting in **July 2025**, affiliated with the [Department of Cancer Biology](https://www.upenn.edu/cancer-biology) and the [Center for Cellular Immunotherapies](https://www.med.upenn.edu/cci/).
+We are a **brand-new lab** at the [University of Pennsylvania](https://www.upenn.edu), starting in **July 2025**, affiliated with the [Department of Cancer Biology](https://www.med.upenn.edu/cbio/) and the [Center for Cellular Immunotherapies](https://www.med.upenn.edu/cci/).
 
 Our focus is  **developing high-throughput approaches to understand and engineer the genetic machinery of immune cells**, with the ultimate goal of improving cellular immunotherapies for cancer and other diseases.
 
