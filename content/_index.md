@@ -1,6 +1,6 @@
 ---
 # Striking header background image, Ideal images are homogenous around the centre and contrasting to the text
-header_image: "/images/cover-image.png"
+header_image: "/images/cover-image.gif"
 
 # When set true, uses video from custom_header_video.html partial, instead of header_image
 header_use_video: false

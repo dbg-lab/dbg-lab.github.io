@@ -80,7 +80,7 @@
 
 #site-head.withCenteredImage {
     background-color: #f6f6f3;
-    background-image: url('/images/cover-image.jpg') !important;
+    background-image: url('/images/cover-image.gif') !important;
     background-position: center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
