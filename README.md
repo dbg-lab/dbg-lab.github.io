@@ -1,4 +1,4 @@
-#Goodman Lab Website
+# Goodman Lab Website
 
 This is the repository for the Goodman Lab website, built using [Hugo](https://gohugo.io/) - a fast and modern static site generator. The site uses the [Hugo Scroll](https://github.com/zjedi/hugo-scroll) theme for its single-page scrolling design.
 
