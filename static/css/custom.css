@@ -987,3 +987,96 @@ h3 {
 margin-bottom: 0;  /* Remove bottom margin from last post */
 padding-bottom: 0;  /* Remove bottom padding from last post */
 }
+
+/* Lab Members Grid */
+.lab-members-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 4rem !important;
+    margin: 2rem 0 3rem 0 !important;
+    flex-wrap: wrap !important;
+    padding: 1rem !important;
+}
+
+/* Lab Member Card Styles */
+.lab-member-card {
+    text-align: center !important;
+    border-radius: 15px !important;
+    padding: 2rem !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    flex: 0 0 auto !important;
+    width: 280px !important;
+}
+
+.lab-member-card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.lab-member-photo {
+    width: 200px !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    margin: 0 auto 1.5rem auto !important;
+    display: block !important;
+}
+
+.lab-member-info {
+    margin-top: 1rem !important;
+}
+
+.lab-member-name {
+    font-family: var(--font-display) !important;
+    font-size: var(--text-h3, 1.4rem) !important;
+    font-weight: var(--weight-light) !important;
+    line-height: var(--leading-tight) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em !important;
+    margin: 0 0 0.5rem 0 !important;
+    color: inherit !important;
+}
+
+.lab-member-title {
+    font-family: var(--font-primary) !important;
+    font-size: var(--text-small) !important;
+    font-weight: var(--weight-light) !important;
+    line-height: var(--leading-normal) !important;
+    margin: 0 !important;
+    font-style: italic !important;
+    opacity: 0.8 !important;
+}
+
+/* Responsive adjustments for lab members */
+@media screen and (max-width: 768px) {
+    .lab-members-grid {
+        gap: 2rem !important;
+    }
+    
+    .lab-member-card {
+        width: 220px !important;
+        padding: 1.5rem !important;
+    }
+    
+    .lab-member-photo {
+        width: 160px !important;
+        height: 160px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .lab-members-grid {
+        gap: 1rem !important;
+    }
+    
+    .lab-member-card {
+        width: 180px !important;
+        padding: 1rem !important;
+    }
+    
+    .lab-member-photo {
+        width: 140px !important;
+        height: 140px !important;
+    }
+}
