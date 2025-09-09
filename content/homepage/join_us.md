@@ -4,7 +4,7 @@ weight: 3
 header_menu: true
 ---
 
-We are **actively recruiting** creative and motivated scientists at all levels, including *postdocs*, *graduate students*, *junior research specialists*, and *undergraduates*. As a new lab, we are committed to building an interdisciplinary team that fosters a vibrant, open, and collaborative culture of research excellence.
+We are **actively recruiting** creative and motivated scientists at all levels, including *postdocs*, *graduate students*, and *undergraduates*. As a new lab, we are committed to building an interdisciplinary team that fosters a vibrant, open, and collaborative culture of research excellence.
 
 ---
 
@@ -24,11 +24,11 @@ Our research spans multiple cutting-edge areas:
 
 ---
 
-### Research Specialist Position
-Apply for our Research Specialist position through [Workday](https://wd1.myworkdaysite.com/recruiting/upenn/careers-at-penn/job/Biomedical-Research-Building-2/Research-Specialist-A-B--Department-of-Cancer-Biology-_JR00104572-1).
-
 ### Graduate Students
 We can recruit from all University of Pennsylvania graduate programs, including [CAMB](https://www.med.upenn.edu/camb/), [Bioengineering](https://be.seas.upenn.edu/), and [GCB](https://www.med.upenn.edu/gcb/).
+
+### Undergraduate and Masters Students
+We invite highly-motivated Undergraduate and Masters students to inquire about part-time positions in the lab. Please send an email describing your background, scientific interests, and CV [here](mailto:recruitment@goodman-lab.org)!
 
 ### Postdoctoral Fellows
 For postdoctoral fellowships and all other positions, please send us your CV with a cover letter [here](mailto:recruitment@goodman-lab.org)!

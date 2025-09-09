@@ -19,7 +19,7 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 
 {{< lab-members >}}
 {{< lab-member-card 
-    image="/images/people/seth-eisenberg.jpg"
+    image="/images/people/seth-eisenberg.png"
     name="Seth Eisenberg, M.S.E."
     title="Research Specialist"
 >}}
@@ -29,4 +29,11 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
     name="Alex Bonadio, Ph.D."
     title="Postdoctoral Fellow"
 >}}
+
+{{< lab-member-card 
+    image="/images/people/aastha-pal.jpg"
+    name="Aastha Pal"
+    title="Bioengineering Ph.D. Student"
+>}}
+
 {{< /lab-members >}}

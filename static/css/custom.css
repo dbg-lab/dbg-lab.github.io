@@ -988,25 +988,38 @@ margin-bottom: 0;  /* Remove bottom margin from last post */
 padding-bottom: 0;  /* Remove bottom padding from last post */
 }
 
+/* Override theme constraints for people section */
+#people .post {
+    max-width: none !important;
+    width: 98% !important;
+}
+
+#people .post-content {
+    max-width: none !important;
+    width: 100% !important;
+}
+
 /* Lab Members Grid */
 .lab-members-grid {
     display: flex !important;
     flex-direction: row !important;
     justify-content: center !important;
-    gap: 4rem !important;
+    gap: 1rem !important;
     margin: 2rem 0 3rem 0 !important;
     flex-wrap: wrap !important;
     padding: 1rem !important;
+    width: 100% !important;
+    max-width: none !important;
 }
 
 /* Lab Member Card Styles */
 .lab-member-card {
     text-align: center !important;
     border-radius: 15px !important;
-    padding: 2rem !important;
+    padding: 1rem !important;
     transition: transform 0.2s ease, box-shadow 0.2s ease !important;
     flex: 0 0 auto !important;
-    width: 280px !important;
+    width: 200px !important;
 }
 
 .lab-member-card:hover {
@@ -1015,11 +1028,11 @@ padding-bottom: 0;  /* Remove bottom padding from last post */
 }
 
 .lab-member-photo {
-    width: 200px !important;
-    height: 200px !important;
+    width: 170px !important;
+    height: 170px !important;
     object-fit: cover !important;
     border-radius: 50% !important;
-    margin: 0 auto 1.5rem auto !important;
+    margin: 0 auto 1.25rem auto !important;
     display: block !important;
 }
 
@@ -1049,34 +1062,54 @@ padding-bottom: 0;  /* Remove bottom padding from last post */
 }
 
 /* Responsive adjustments for lab members */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .lab-members-grid {
-        gap: 2rem !important;
+        gap: 0.75rem !important;
     }
     
     .lab-member-card {
-        width: 220px !important;
+        width: 180px !important;
+        padding: 0.75rem !important;
+    }
+    
+    .lab-member-photo {
+        width: 140px !important;
+        height: 140px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .lab-members-grid {
+        gap: 1rem !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .lab-member-card {
+        width: 280px !important;
         padding: 1.5rem !important;
     }
     
     .lab-member-photo {
-        width: 160px !important;
-        height: 160px !important;
+        width: 180px !important;
+        height: 180px !important;
     }
 }
 
 @media screen and (max-width: 480px) {
     .lab-members-grid {
         gap: 1rem !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
     
     .lab-member-card {
-        width: 180px !important;
+        width: 240px !important;
         padding: 1rem !important;
     }
     
     .lab-member-photo {
-        width: 140px !important;
-        height: 140px !important;
+        width: 160px !important;
+        height: 160px !important;
     }
 }
