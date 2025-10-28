@@ -42,4 +42,10 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
     title="Genomics & Comp Bio Ph.D. Student"
 >}}
 
+{{< lab-member-card 
+    image="/images/people/djuna-day-booth.jpg"
+    name="Djuna Day-Booth"
+    title="Research Intern"
+>}}
+
 {{< /lab-members >}}
