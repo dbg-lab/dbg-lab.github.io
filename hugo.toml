@@ -84,7 +84,7 @@ enableEmoji = true
 
     [[params.contacts]]
         label = "address"
-        value = "Smilow Center for Translational Research<br>3400 Civic Center Boulevard<br>Philadelphia, PA 19104"
+        value = "Smilow Center for Translational Research<br>SCTR 8-122<br>3400 Civic Center Boulevard<br>Philadelphia, PA 19104"
         url = ""
         icon = "fa fa-map-marker"
 
