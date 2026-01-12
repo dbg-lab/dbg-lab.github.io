@@ -54,6 +54,12 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
     title="Immunology Ph.D. Student"
 >}}
 
+{{< lab-member-card 
+    image="/images/people/pedram-bayat.jpg"
+    name="Pedram Bayat"
+    title="Undergraduate Researcher, Bioengineering"
+>}}
+
 {{< /lab-members >}}
 
 {{< alumni-section >}}
