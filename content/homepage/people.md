@@ -31,21 +31,49 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 >}}
 
 {{< lab-member-card 
-    image="/images/people/aastha-pal.jpg"
-    name="Aastha Pal, M.S."
-    title="Bioengineering Ph.D. Student"
+    image="/images/people/oren-gozlan.jpg"
+    name="Oren Gozlan, Ph.D."
+    title="Postdoctoral Fellow"
 >}}
 
 {{< lab-member-card 
-    image="/images/people/bryant-duong.jpg"
-    name="Bryant Duong"
-    title="Genomics & Comp Bio Ph.D. Student"
+    image="/images/people/isabella-pargiolas.jpg"
+    name="Isabella Pargiolas"
+    title="Pharmacology Ph.D. Student"
 >}}
 
 {{< lab-member-card 
-    image="/images/people/djuna-day-booth.jpg"
-    name="Djuna Day-Booth"
-    title="Research Intern"
+    image="/images/people/haley-sax.png"
+    name="Haley Sax"
+    title="Immunology Ph.D. Student"
+>}}
+
+{{< lab-member-card 
+    image="/images/people/elsa-bechu.png"
+    name="Elsa Bechu"
+    title="Immunology Ph.D. Student"
 >}}
 
 {{< /lab-members >}}
+
+{{< alumni-section >}}
+{{< lab-alumni >}}
+{{< lab-alumni-card 
+    image="/images/people/aastha-pal.jpg"
+    name="Aastha Pal, M.S."
+    title="Former Bioengineering Ph.D. Student"
+>}}
+
+{{< lab-alumni-card 
+    image="/images/people/bryant-duong.jpg"
+    name="Bryant Duong"
+    title="Former Genomics & Comp Bio Ph.D. Student"
+>}}
+
+{{< lab-alumni-card 
+    image="/images/people/djuna-day-booth.jpg"
+    name="Djuna Day-Booth"
+    title="Former Research Intern"
+>}}
+{{< /lab-alumni >}}
+{{< /alumni-section >}}

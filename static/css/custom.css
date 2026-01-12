@@ -1113,3 +1113,141 @@ padding-bottom: 0;  /* Remove bottom padding from last post */
         height: 160px !important;
     }
 }
+
+/* Lab Alumni Grid - smaller version of lab members */
+.lab-alumni-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 0.75rem !important;
+    margin: 1.5rem 0 2rem 0 !important;
+    flex-wrap: wrap !important;
+}
+
+/* Lab Alumni Card Styles - 75% size of regular lab member cards */
+.lab-alumni-card {
+    text-align: center !important;
+    border-radius: 12px !important;
+    padding: 0.75rem !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    flex: 0 0 auto !important;
+    width: 180px !important;
+}
+
+.lab-alumni-card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.lab-alumni-photo {
+    width: 128px !important;
+    height: 128px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    margin: 0 auto 0.75rem auto !important;
+    display: block !important;
+}
+
+.lab-alumni-info {
+    margin-top: 0.75rem !important;
+}
+
+.lab-alumni-name {
+    font-family: var(--font-display) !important;
+    font-size: calc(var(--text-h3, 1.4rem) * 0.7) !important;
+    font-weight: var(--weight-light) !important;
+    line-height: var(--leading-tight) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em !important;
+    margin: 0 0 0.5rem 0 !important;
+    color: var(--color-text) !important;
+}
+
+.lab-alumni-title {
+    font-family: var(--font-primary) !important;
+    font-size: calc(var(--text-small) * 0.85) !important;
+    font-weight: var(--weight-light) !important;
+    line-height: var(--leading-normal) !important;
+    margin: 0 !important;
+    color: var(--color-text-light) !important;
+    opacity: 0.8 !important;
+}
+
+/* Alumni section header styling */
+.alumni-section-header {
+    cursor: pointer;
+    margin: var(--spacing-lg) 0 var(--spacing-md) 0;
+    padding: var(--spacing-sm) 0;
+}
+
+.alumni-section-header:hover {
+    opacity: 0.8;
+}
+
+.alumni-section-header h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Responsive adjustments for alumni */
+@media screen and (max-width: 900px) {
+    .lab-alumni-grid {
+        gap: 0.5rem !important;
+    }
+    
+    .lab-alumni-card {
+        width: 160px !important;
+        padding: 0.5rem !important;
+    }
+    
+    .lab-alumni-photo {
+        width: 105px !important;
+        height: 105px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .lab-alumni-grid {
+        gap: 0.75rem !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+    }
+    
+    .lab-alumni-card {
+        width: 170px !important;
+        padding: 0.75rem !important;
+    }
+    
+    .lab-alumni-photo {
+        width: 120px !important;
+        height: 120px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .lab-alumni-grid {
+        gap: 0.5rem !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+    }
+    
+    .lab-alumni-card {
+        width: 140px !important;
+        padding: 0.5rem !important;
+    }
+    
+    .lab-alumni-photo {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    
+    .lab-alumni-name {
+        font-size: calc(var(--text-h3, 1.4rem) * 0.65) !important;
+    }
+    
+    .lab-alumni-title {
+        font-size: calc(var(--text-small) * 0.8) !important;
+    }
+}

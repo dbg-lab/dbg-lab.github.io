@@ -1,0 +1,24 @@
+<div class="alumni-section-header" onclick="toggleAlumniSection()" role="button" tabindex="0">
+    <h3><i class="fas fa-chevron-right" id="alumni-chevron"></i> Alumni</h3>
+</div>
+
+<div id="alumni-section" style="display: none;">
+    {{ .Inner }}
+</div>
+
+<script>
+function toggleAlumniSection() {
+    const alumniSection = document.getElementById('alumni-section');
+    const alumniChevron = document.getElementById('alumni-chevron');
+    
+    if (alumniSection.style.display === 'none') {
+        alumniSection.style.display = 'block';
+        alumniChevron.classList.remove('fa-chevron-right');
+        alumniChevron.classList.add('fa-chevron-down');
+    } else {
+        alumniSection.style.display = 'none';
+        alumniChevron.classList.remove('fa-chevron-down');
+        alumniChevron.classList.add('fa-chevron-right');
+    }
+}
+</script>

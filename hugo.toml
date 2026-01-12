@@ -15,6 +15,12 @@ title = "The Goodman Lab"
 # enable emoji processing in Markdown (valid only for pure markdown content)
 enableEmoji = true
 
+# Allow unsafe HTML in markdown (needed for custom HTML elements)
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 # Theme-specific variables `.Site.Params.myParamName`
 [params]
 
