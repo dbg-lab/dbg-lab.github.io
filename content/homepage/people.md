@@ -61,13 +61,13 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 {{< lab-alumni-card 
     image="/images/people/aastha-pal.jpg"
     name="Aastha Pal, M.S."
-    title="Former Bioengineering Ph.D. Student"
+    title="Former Bioengineering Ph.D. Rotation Student"
 >}}
 
 {{< lab-alumni-card 
     image="/images/people/bryant-duong.jpg"
     name="Bryant Duong"
-    title="Former Genomics & Comp Bio Ph.D. Student"
+    title="Former Genomics & Comp Bio Ph.D. Rotation Student"
 >}}
 
 {{< lab-alumni-card 
