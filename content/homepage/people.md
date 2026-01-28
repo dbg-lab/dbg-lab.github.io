@@ -60,6 +60,12 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
     title="Undergraduate Researcher, Bioengineering"
 >}}
 
+{{< lab-member-card 
+    image="/images/people/reva-rasane.jpg"
+    name="Reva Rasane"
+    title="Bioengineering Master's Student"
+>}}
+
 {{< /lab-members >}}
 
 {{< alumni-section >}}
