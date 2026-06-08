@@ -77,7 +77,7 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 >}}
 
 {{< lab-alumni-card 
-    image="/images/people/placeholder.svg"
+    image="/images/people/yiyang-jiang.jpg"
     name="Yiyang Jiang"
     title="Former Cancer Biology Ph.D. Rotation Student"
 >}}
