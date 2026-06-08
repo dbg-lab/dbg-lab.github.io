@@ -19,6 +19,12 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 
 {{< lab-members >}}
 {{< lab-member-card 
+    image="/images/people/seth-eisenberg.png"
+    name="Seth Eisenberg, M.S.E."
+    title="Research Specialist"
+>}}
+
+{{< lab-member-card 
     image="/images/people/alex-bonadio.png"
     name="Alex Bonadio, Ph.D."
     title="Postdoctoral Fellow"
@@ -39,12 +45,6 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 {{< lab-member-card 
     image="/images/people/haley-sax.png"
     name="Haley Sax"
-    title="Immunology Ph.D. Student"
->}}
-
-{{< lab-member-card 
-    image="/images/people/elsa-bechu.png"
-    name="Elsa Bechu"
     title="Immunology Ph.D. Student"
 >}}
 
@@ -71,14 +71,14 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 {{< alumni-section >}}
 {{< lab-alumni >}}
 {{< lab-alumni-card 
-    image="/images/people/seth-eisenberg.png"
-    name="Seth Eisenberg, M.S.E."
-    title="Former Research Specialist"
+    image="/images/people/elsa-bechu.png"
+    name="Elsa Bechu"
+    title="Former Immunology Ph.D. Student"
 >}}
 
 {{< lab-alumni-card 
     image="/images/people/placeholder.svg"
-    name="Yiyang (Mike) Jiang"
+    name="Yiyang Jiang"
     title="Former Cancer Biology Ph.D. Rotation Student"
 >}}
 
