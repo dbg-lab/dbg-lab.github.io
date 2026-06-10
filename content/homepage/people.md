@@ -37,12 +37,6 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 >}}
 
 {{< lab-member-card 
-    image="/images/people/isabella-pargiolas.jpg"
-    name="Isabella Pargiolas"
-    title="Pharmacology Ph.D. Student"
->}}
-
-{{< lab-member-card 
     image="/images/people/haley-sax.png"
     name="Haley Sax"
     title="Immunology Ph.D. Student"
@@ -51,17 +45,17 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 {{< lab-member-card 
     image="/images/people/pedram-bayat.jpg"
     name="Pedram Bayat"
-    title="Undergraduate Researcher, Bioengineering"
+    title="Undergraduate Researcher"
 >}}
 
 {{< lab-member-card 
     image="/images/people/reva-rasane.jpg"
-    name="Reva Rasane"
-    title="Bioengineering Master's Student"
+    name="Reva Rasane, M.S."
+    title="Research Assistant"
 >}}
 
 {{< lab-member-card 
-    image="/images/people/placeholder.svg"
+    image="/images/people/anya-lin.jpg"
     name="Anya Lin"
     title="Undergraduate Researcher"
 >}}
@@ -74,6 +68,12 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
     image="/images/people/elsa-bechu.png"
     name="Elsa Bechu"
     title="Former Immunology Ph.D. Student"
+>}}
+
+{{< lab-alumni-card 
+    image="/images/people/isabella-pargiolas.jpg"
+    name="Isabella Pargiolas"
+    title="Former Pharmacology Ph.D. Rotation Student"
 >}}
 
 {{< lab-alumni-card 
