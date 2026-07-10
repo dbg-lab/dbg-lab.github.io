@@ -28,6 +28,8 @@ implementing agent can build it without re-deciding anything.
   member info via a **Google Sheet** that lab members can edit, pull it into the
   site, then announce it (Slack + email) and mirror it into Notion. See
   "Phase 2 — content pipeline" below. Do NOT block Phase 1 on this.
+  **Phase 2 is a separate job for a NEW/future agent** (Google Sheets + Slack +
+  Notion MCPs) — the Phase 1 agent should not build the sheet or pipeline.
 
 ## Decisions (LOCKED — do not re-open)
 1. **Interaction = native `<dialog>` that morphs from the clicked card**, using the
@@ -233,10 +235,13 @@ Notes for the implementer:
 - **Styling inspiration:** https://uiverse.io/ · https://moderncss.dev/ ·
   https://tympanus.net/codrops/
 
-## Phase 2 — content pipeline (LATER; do not block Phase 1)
-Goal: collect real per-member content with minimal friction, keep it editable by lab
-members, and fan it out to the site + announcements. Rough shape (to be planned in
-its own brief):
+## Phase 2 — content pipeline (LATER; separate job for a NEW agent)
+**Owner: a new/future agent**, kicked off separately once Phase 1 lands — NOT the
+Phase 1 implementer. It will build the Google Sheet, the pull-into-site step, the
+Slack/email announcement, and the Notion mirror (Google Sheets + Slack + Notion MCPs
+are available for this). Goal: collect real per-member content with minimal friction,
+keep it editable by lab members, and fan it out to the site + announcements. Rough
+shape (to be fleshed into its own brief by that agent):
 1. **Google Sheet as source of truth.** Build a sheet (one row per member) with
    columns matching the dialog fields: name, title, image, education, project blurb,
    hobbies/interests, homepage, scholar, linkedin, github, orcid, email, position
