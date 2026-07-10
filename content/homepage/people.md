@@ -60,6 +60,12 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
     title="Undergraduate Researcher"
 >}}
 
+{{< lab-member-card 
+    image="/images/people/gloria-liu.jpg"
+    name="Gloria Liu"
+    title="Undergraduate Researcher"
+>}}
+
 {{< /lab-members >}}
 
 {{< alumni-section >}}
