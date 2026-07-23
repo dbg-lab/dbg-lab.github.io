@@ -49,12 +49,6 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 >}}
 
 {{< lab-member-card 
-    image="/images/people/reva-rasane.jpg"
-    name="Reva Rasane, M.S."
-    title="Research Assistant"
->}}
-
-{{< lab-member-card 
     image="/images/people/anya-lin.jpg"
     name="Anya Lin"
     title="Undergraduate Researcher"
@@ -70,6 +64,12 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 
 {{< alumni-section >}}
 {{< lab-alumni >}}
+{{< lab-alumni-card 
+    image="/images/people/reva-rasane.jpg"
+    name="Reva Rasane, M.S."
+    title="Former Research Assistant"
+>}}
+
 {{< lab-alumni-card 
     image="/images/people/elsa-bechu.png"
     name="Elsa Bechu"
