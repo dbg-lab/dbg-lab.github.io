@@ -1,5 +1,9 @@
 # Website TODOs
 
+See [docs/site-inspiration.md](docs/site-inspiration.md) for lab sites we're borrowing
+ideas from (Nuno Barbosa-Morais' Disease Transcriptomics Lab — especially its team and
+alumni sections, which cover several of the items below).
+
 1. Carousel for featured research/papers
 2. links to Penn Med, Cancer Bio, PICI
 3. fix NIH paper versions to journal-formatted versions for selected at least
