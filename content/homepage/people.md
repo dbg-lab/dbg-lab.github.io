@@ -19,9 +19,9 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 
 {{< lab-members >}}
 {{< lab-member-card 
-    image="/images/people/seth-eisenberg.png"
-    name="Seth Eisenberg, M.S.E."
-    title="Research Specialist"
+    image="/images/people/seth-anderson.png"
+    name="Seth Anderson"
+    title="Immunology Ph.D. Rotation Student"
 >}}
 
 {{< lab-member-card 
@@ -37,20 +37,8 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 >}}
 
 {{< lab-member-card 
-    image="/images/people/haley-sax.png"
-    name="Haley Sax"
-    title="Immunology Ph.D. Student"
->}}
-
-{{< lab-member-card 
     image="/images/people/pedram-bayat.jpg"
     name="Pedram Bayat"
-    title="Undergraduate Researcher"
->}}
-
-{{< lab-member-card 
-    image="/images/people/anya-lin.jpg"
-    name="Anya Lin"
     title="Undergraduate Researcher"
 >}}
 
@@ -64,6 +52,24 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 
 {{< alumni-section >}}
 {{< lab-alumni >}}
+{{< lab-alumni-card
+    image="/images/people/seth-eisenberg.png"
+    name="Seth Eisenberg, M.S.E."
+    title="Former Research Specialist"
+>}}
+
+{{< lab-alumni-card
+    image="/images/people/haley-sax.png"
+    name="Haley Sax"
+    title="Former Immunology Ph.D. Rotation Student"
+>}}
+
+{{< lab-alumni-card
+    image="/images/people/anya-lin.jpg"
+    name="Anya Lin"
+    title="Former Undergraduate Researcher"
+>}}
+
 {{< lab-alumni-card 
     image="/images/people/reva-rasane.jpg"
     name="Reva Rasane, M.S."
