@@ -19,7 +19,7 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 
 {{< lab-members >}}
 {{< lab-member-card 
-    image="/images/people/seth-anderson.jpg"
+    image="/images/people/seth-anderson.png"
     name="Seth Anderson"
     title="Immunology Ph.D. Rotation Student"
 >}}
