@@ -19,15 +19,9 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 
 {{< lab-members >}}
 {{< lab-member-card 
-    image="/images/people/seth-anderson.png"
-    name="Seth Anderson"
-    title="Immunology Ph.D. Rotation Student"
->}}
-
-{{< lab-member-card 
-    image="/images/people/courtney-kernick.png"
-    name="Courtney Kernick"
-    title="Immunology Ph.D. Rotation Student"
+    image="/images/people/ahmed-azhar.png"
+    name="Ahmed Azhar"
+    title="Research Specialist"
 >}}
 
 {{< lab-member-card 
@@ -43,9 +37,15 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 >}}
 
 {{< lab-member-card 
-    image="/images/people/ahmed-azhar.png"
-    name="Ahmed Azhar"
-    title="Research Specialist"
+    image="/images/people/seth-anderson.png"
+    name="Seth Anderson"
+    title="Immunology Ph.D. Rotation Student"
+>}}
+
+{{< lab-member-card 
+    image="/images/people/courtney-kernick.png"
+    name="Courtney Kernick"
+    title="Immunology Ph.D. Rotation Student"
 >}}
 
 {{< lab-member-card 
