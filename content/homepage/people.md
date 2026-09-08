@@ -25,6 +25,12 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 >}}
 
 {{< lab-member-card 
+    image="/images/people/courtney-kernick.png"
+    name="Courtney Kernick"
+    title="Immunology Ph.D. Rotation Student"
+>}}
+
+{{< lab-member-card 
     image="/images/people/alex-bonadio.png"
     name="Alex Bonadio, Ph.D."
     title="Postdoctoral Fellow"
@@ -37,6 +43,12 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 >}}
 
 {{< lab-member-card 
+    image="/images/people/ahmed-azhar.png"
+    name="Ahmed Azhar"
+    title="Research Specialist"
+>}}
+
+{{< lab-member-card 
     image="/images/people/pedram-bayat.jpg"
     name="Pedram Bayat"
     title="Undergraduate Researcher"
@@ -45,6 +57,12 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 {{< lab-member-card 
     image="/images/people/gloria-liu.jpg"
     name="Gloria Liu"
+    title="Undergraduate Researcher"
+>}}
+
+{{< lab-member-card 
+    image="/images/people/placeholder.svg"
+    name="Jorge Cervera Torralba"
     title="Undergraduate Researcher"
 >}}
 

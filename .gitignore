@@ -2,3 +2,5 @@
 public/
 resources/_gen/
 .hugo_build.lock 
+# Downloaded face-detection model for scripts/make_headshot.py
+scripts/.cache/
