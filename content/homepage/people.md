@@ -61,7 +61,7 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 >}}
 
 {{< lab-member-card 
-    image="/images/people/placeholder.svg"
+    image="/images/people/jorge-cervera-torralba.png"
     name="Jorge Cervera Torralba"
     title="Undergraduate Researcher"
 >}}

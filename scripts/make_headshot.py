@@ -74,11 +74,40 @@ def detect(img):
     return eye_mid, iod, float(f[0] + f[2] / 2)
 
 
+def decontaminate(cut, raw):
+    """Strip the old background's colour out of semi-transparent edge pixels.
+
+    A soft alpha edge (flyaway hair) is a blend of subject and original
+    background: C = a*F + (1-a)*B. Composited onto the blue, the leftover B
+    shows up as a pale halo. Solving for F removes it.
+
+    Only safe when the original background is close to uniform, so a busy
+    backdrop (foliage, a room) is left alone -- there is no single B to undo.
+    """
+    arr = np.asarray(cut).astype(np.float32)
+    a = arr[..., 3:4] / 255.0
+    rgb = np.asarray(raw).astype(np.float32)
+
+    bg_px = rgb[arr[..., 3] < 10]
+    if len(bg_px) < 500 or bg_px.std(axis=0).mean() > 25:
+        return cut  # background too varied to model
+    B = np.median(bg_px, axis=0)
+
+    edge = ((a > 0.04) & (a < 0.98))[..., 0]
+    fixed = rgb.copy()
+    fixed[edge] = np.clip(
+        (rgb[edge] - (1 - a[edge]) * B) / np.maximum(a[edge], 0.04), 0, 255
+    )
+    return Image.fromarray(
+        np.dstack([fixed.astype(np.uint8), arr[..., 3].astype(np.uint8)]), "RGBA"
+    )
+
+
 def main(src, dst):
     from rembg import new_session, remove
 
     raw = Image.open(src).convert("RGB")
-    cut = remove(raw, session=new_session("u2net"))
+    cut = decontaminate(remove(raw, session=new_session("u2net")), raw)
 
     alpha = np.asarray(cut)[..., 3]
     crown = float(np.where((alpha > 128).any(axis=1))[0].min())
