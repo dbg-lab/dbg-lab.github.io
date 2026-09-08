@@ -1012,6 +1012,17 @@ padding-bottom: 0;  /* Remove bottom padding from last post */
     max-width: none !important;
 }
 
+/* Forces the next member card onto a new row, so the roster's role tiers
+   (postdocs / staff + rotation students / undergrads) stay on their own lines
+   instead of reflowing together at wide viewports. Collapses harmlessly in the
+   single-column mobile layout below. */
+.lab-members-break {
+    flex-basis: 100% !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 /* Lab Member Card Styles */
 .lab-member-card {
     text-align: center !important;
