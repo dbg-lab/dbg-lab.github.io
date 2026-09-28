@@ -59,12 +59,6 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 >}}
 
 {{< lab-member-card 
-    image="/images/people/gloria-liu.jpg"
-    name="Gloria Liu"
-    title="Undergraduate Researcher"
->}}
-
-{{< lab-member-card 
     image="/images/people/jorge-cervera-torralba.png"
     name="Jorge Cervera Torralba"
     title="Undergraduate Researcher"
@@ -89,6 +83,12 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
 {{< lab-alumni-card
     image="/images/people/anya-lin.jpg"
     name="Anya Lin"
+    title="Former Undergraduate Researcher"
+>}}
+
+{{< lab-alumni-card
+    image="/images/people/gloria-liu.jpg"
+    name="Gloria Liu"
     title="Former Undergraduate Researcher"
 >}}
 
