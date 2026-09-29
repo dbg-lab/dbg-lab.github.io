@@ -74,6 +74,25 @@ def detect(img):
     return eye_mid, iod, float(f[0] + f[2] / 2)
 
 
+def local_background(rgb, bg, fallback):
+    """Per-pixel estimate of the backdrop, for scenes with no single colour.
+
+    Normalized convolution over the known-background pixels: a box average of
+    the backdrop that simply skips the subject. Run coarse to fine so the
+    smallest window with enough background behind it wins, which keeps the
+    estimate local where the backdrop changes fast (a brick edge against sky)
+    and lets it widen where the subject blocks most of the window.
+    """
+    est = np.broadcast_to(fallback, rgb.shape).astype(np.float32).copy()
+    w = bg.astype(np.float32)
+    for r in (257, 129, 65, 33):
+        num = cv2.blur(rgb * w[..., None], (r, r), borderType=cv2.BORDER_REPLICATE)
+        den = cv2.blur(w, (r, r), borderType=cv2.BORDER_REPLICATE)
+        ok = den > 0.05  # enough backdrop in the window to average
+        est[ok] = (num / np.maximum(den, 1e-6)[..., None])[ok]
+    return est
+
+
 def decontaminate(cut, raw):
     """Strip the old background's colour out of semi-transparent edge pixels.
 
@@ -81,22 +100,28 @@ def decontaminate(cut, raw):
     background: C = a*F + (1-a)*B. Composited onto the blue, the leftover B
     shows up as a pale halo. Solving for F removes it.
 
-    Only safe when the original background is close to uniform, so a busy
-    backdrop (foliage, a room) is left alone -- there is no single B to undo.
+    A uniform backdrop gives one B for the whole image. A busy one (steps,
+    brick, foliage) has no single B, so B is estimated per pixel from the
+    backdrop immediately around each strand -- outdoor phone photos are the
+    common case and their halo is the most visible.
     """
     arr = np.asarray(cut).astype(np.float32)
     a = arr[..., 3:4] / 255.0
     rgb = np.asarray(raw).astype(np.float32)
 
-    bg_px = rgb[arr[..., 3] < 10]
-    if len(bg_px) < 500 or bg_px.std(axis=0).mean() > 25:
-        return cut  # background too varied to model
-    B = np.median(bg_px, axis=0)
+    bg = arr[..., 3] < 10
+    bg_px = rgb[bg]
+    if len(bg_px) < 500:
+        return cut  # nothing identifiable as background to undo
+    median = np.median(bg_px, axis=0)
+    uniform = bg_px.std(axis=0).mean() <= 25
+    B = median if uniform else local_background(rgb, bg, median)
 
     edge = ((a > 0.04) & (a < 0.98))[..., 0]
     fixed = rgb.copy()
+    B_edge = B if uniform else B[edge]
     fixed[edge] = np.clip(
-        (rgb[edge] - (1 - a[edge]) * B) / np.maximum(a[edge], 0.04), 0, 255
+        (rgb[edge] - (1 - a[edge]) * B_edge) / np.maximum(a[edge], 0.04), 0, 255
     )
     return Image.fromarray(
         np.dstack([fixed.astype(np.uint8), arr[..., 3].astype(np.uint8)]), "RGBA"
