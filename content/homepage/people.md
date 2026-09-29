@@ -64,11 +64,17 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
     title="Undergraduate Researcher"
 >}}
 
-{{< lab-members-break >}}
-
 {{< lab-member-card 
     image="/images/people/risa-garg.png"
     name="Risa Garg"
+    title="Undergraduate Researcher"
+>}}
+
+{{< lab-members-break >}}
+
+{{< lab-member-card 
+    image="/images/people/andrew-lee.png"
+    name="Andrew Lee"
     title="Undergraduate Researcher"
 >}}
 
