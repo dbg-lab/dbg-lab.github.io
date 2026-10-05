@@ -84,6 +84,12 @@ Dr. Goodman is an Assistant Professor in the [Department of Cancer Biology](http
     title="Undergraduate Researcher"
 >}}
 
+{{< lab-member-card 
+    image="/images/people/ryan-shao.png"
+    name="Ryan Shao"
+    title="Undergraduate Researcher"
+>}}
+
 {{< /lab-members >}}
 
 {{< alumni-section >}}
